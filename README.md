@@ -8,13 +8,13 @@ Site for users to create a ToDo list that will save through cookies for them to 
 
 ## Features
 
--[ ] Create and remove ToDo items
--[ ] Mark as completed ToDO items
--[ ] Sort the ToDo items
--[ ] Display the ToDo items by day, type, ect.
--[ ] Search the ToDo items
--[ ] Change the theme of the site
--[ ] List and setting will save to the users device
+- [ ] Create and remove ToDo items
+- [ ] Mark as completed ToDO items
+- [ ] Sort the ToDo items
+- [ ] Display the ToDo items by day, type, ect.
+- [ ] Search the ToDo items
+- [ ] Change the theme of the site
+- [ ] List and setting will save to the users device
 
 ### Learning Outcome
 
