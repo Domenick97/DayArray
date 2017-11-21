@@ -1,0 +1,54 @@
+body{
+  font: 15px/1.5 arial;
+  margin: 0;
+  padding: 0;
+}
+
+.container2{
+  width: 94%;
+  margin:auto;
+  overflow: hidden;
+}
+
+header{
+  width: 100%;
+  background-color: #dddd22;
+  color: #FFFFFF;
+}
+
+header .container2{
+  width: 100%;
+}
+
+header ul{
+  float: right;
+}
+
+header li{
+  display: inline;
+}
+
+#links{
+  width: 30%;
+  min-width: 100px;
+  background-color: #efe222;
+  float: right;
+  text-decoration: none;
+}
+
+.item{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+
+  padding: 5px 0 5px;
+  width: 98%;
+}
+
+#listArea{
+
+
+  float: left;
+  background-color: #7B7D7D;
+}
