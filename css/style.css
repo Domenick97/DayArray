@@ -1,24 +1,32 @@
 body{
-  font: 15px/1.5 arial;
+  font: 16px/1.5 arial;
   margin: 0;
   padding: 0;
 }
-
-.container2{
+/*
+.container{
   width: 94%;
   margin:auto;
   overflow: hidden;
+}
+*/
+.icon-link{
+  height: 2em;
+  width: 2em;
 }
 
 header{
   width: 100%;
   background-color: #dddd22;
   color: #FFFFFF;
+  height: 125px;
+  box-shadow: inset 0px -4px 10px 0px #2A8ACA;
 }
 
-header .container2{
+/*
+header .container{
   width: 100%;
-}
+}*/
 
 header ul{
   float: right;
@@ -31,7 +39,6 @@ header li{
 #links{
   width: 30%;
   min-width: 100px;
-  background-color: #efe222;
   float: right;
   text-decoration: none;
 }
@@ -44,6 +51,7 @@ header li{
 
   padding: 5px 0 5px;
   width: 98%;
+  box-shadow: 2px 2px 3px 0px #CCC;
 }
 
 #listArea{

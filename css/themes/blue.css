@@ -1,0 +1,16 @@
+.bg-theme{
+  background-color: #3498DB;
+  border: 2px solid #2A8ACA;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  margin-bottom: 10px;
+}
+.color-theme{
+  color: #3498DB;
+}
+.item-theme{
+  border: 3px solid #58ade3;
+  background-color: #85c4ed;
+  border-radius: 5px;
+}

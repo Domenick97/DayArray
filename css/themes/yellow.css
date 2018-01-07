@@ -1,0 +1,10 @@
+.bg-theme{
+  background-color: #F1C40F;
+}
+.color-theme{
+  color: #F1C40F;
+}
+.item-theme{
+  border: 3px solid #F1C40F;
+  border-radius: 5px;
+}
