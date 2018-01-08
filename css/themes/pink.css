@@ -1,0 +1,10 @@
+.bg-theme{
+  background-color: #FF80EE;
+}
+.color-theme{
+  color: #FF80EE;
+}
+.item-theme{
+  border: 3px solid #FF80EE;
+  border-radius: 5px;
+}

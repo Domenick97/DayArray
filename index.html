@@ -2,31 +2,44 @@
 <html>
 <!-- Global site tag (gtag.js) - Google Analytics -->
   <head>
-    <meta charset="utf-8">
-    <title>Day Array</title>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-96903651-2', 'auto');
-    ga('send', 'pageview');
+      ga('create', 'UA-96903651-2', 'auto');
+      ga('send', 'pageview');
 
-  </script>
-    <!--link rel="shortcut icon" href="images/favicon.ico" /-->
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="To-do list application">
+    <meta name="keywords" content="todo,to-do,day,array,dayarray,list,editor">
+    <meta name="author" content="Domenick DiBiase">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/favicon2.ico" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/themes.css">
 
+    <script language="JavaScript" type="text/JavaScript" src="js/main.js"></script>
+
+    <title>Day Array</title>
   </head>
   <body>
-    <header>
-      <div class="container2" style="background-color:#222222; margin=0" >
+
+    <header class="bg-theme">
+      <div class="container-fluid" style="margin=0">
         <div id="title">
           Day Array
         </div>
         <nav>
+          <div id="links">
+            <a href="https://github.com/Domenick97" target="_blank"><img src="images/github.png" alt="GitHub" class="icon" id="githubLink"/></a>
+            <a href="https://linkedin.com/in/domenickd" target="_blank"><img src="images/linkedIn.png" alt="LinkedIn" class="icon" id="linkedInLink"/></a>
+            <a href="http://domenickdibiase.com" target="_blank"><img src="images/dd.png" alt="Resume" class="icon" id="resumeLink"/></a>
+          </div>
           <ul>
             <li>Test</li>
             <li>Test1</li>
@@ -38,76 +51,84 @@
 
 
     <section>
+      <div class="item-theme" id="s">Place for Sort By and Filter Hub</div>
       <!-- Main section -->
-      <div class="container2 row" >
-        <div class="col-sm-8 bg-grey">
+      <div class="conatiner row justify-content-center" >
+        <div class="col-lg-6">
           <!-- Main list area -->
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>First</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>Second</p>
           </div>
-          <div class="item item-default">
-            <p>First</p>
+          <div class="item item-theme">
+            <p>Third</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
+            <p>Forth</p>
+          </div>
+          <div class="item item-theme">
+            <p>Fifth</p>
+          </div>
+          <div class="item item-theme">
             <p>Second</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>First</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>Second</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>First</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>Second</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>First</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>Second</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>First</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>Second</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>First</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>Second</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>First</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>Second</p>
           </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>First</p>
           </div>
-          <div class="item item-default">
-            <p>Second</p>
-          </div>
-          <div class="item item-default">
-            <p>First</p>
-          </div>
-          <div class="item item-default">
+          <div class="item item-theme">
             <p>Second</p>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-lg-4">
           <!-- Links bar area -->
+          <div>Links</div>
           <p>Here is where link bar will go</p>
         </div>
       </div>
     </section>
+
+    <footer>
+    <div class="container">
+      <div style="width:100%;text-align:center;" id="foot"> <span class="prompt" id="privacy">Privacy Policy</span> <span style="color:#bbb">|</span> <span class="prompt">&copy; Copyright 2018</span></div>
+    </div>
+  </footer>
   </body>
 </html>
