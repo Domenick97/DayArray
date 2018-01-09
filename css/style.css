@@ -3,13 +3,7 @@ body{
   margin: 0;
   padding: 0;
 }
-/*
-.container{
-  width: 94%;
-  margin:auto;
-  overflow: hidden;
-}
-*/
+
 .icon-link{
   height: 2em;
   width: 2em;
@@ -17,23 +11,36 @@ body{
 
 header{
   width: 100%;
-  background-color: #dddd22;
   color: #FFFFFF;
-  height: 125px;
+  height: 120px;
+  overflow: hidden;
   box-shadow: inset 0px -4px 10px 0px #2A8ACA;
+  display: relative;
 }
 
-/*
-header .container{
-  width: 100%;
-}*/
-
-header ul{
-  float: right;
+#title{
+  color:#EEE;
+  line-height: 90px;
+  width: 20%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0px 0 15px 0;
+  font-size: 40px;
+  padding-left: 70px;
+/*  background-color: #FFF;*/
+  display: inline-block;
+  float:left;
 }
 
-header li{
-  display: inline;
+#drop-down{
+  display: inline-block;
+  height: 30px;
+/*  background-color: #555;*/
+  width: 40px;
+  position: absolute;
+  right:20px;
+  top:20px;
+  z=1;
 }
 
 #links{

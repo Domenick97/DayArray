@@ -29,24 +29,19 @@
   </head>
   <body>
 
-    <header class="bg-theme">
-      <div class="container-fluid" style="margin=0">
+    <header class="bg-theme container-fluid">
         <div id="title">
-          Day Array
+          <p>Day Array</p>
         </div>
-        <nav>
-          <div id="links">
-            <a href="https://github.com/Domenick97" target="_blank"><img src="images/github.png" alt="GitHub" class="icon" id="githubLink"/></a>
-            <a href="https://linkedin.com/in/domenickd" target="_blank"><img src="images/linkedIn.png" alt="LinkedIn" class="icon" id="linkedInLink"/></a>
-            <a href="http://domenickdibiase.com" target="_blank"><img src="images/dd.png" alt="Resume" class="icon" id="resumeLink"/></a>
-          </div>
-          <ul>
-            <li>Test</li>
-            <li>Test1</li>
-            <li>Test2</li>
-          </ul>
-        </nav>
-      </div>
+        <div id="drop-down">
+          <a onclick="slideMenuOpen()" style="float:left">
+            <svg width="36px" height="36px">
+              <path d="M0,3 36,3" stroke="#FFF" stroke-width="6px"/>
+              <path d="M0,15 40,15" stroke="#FFF" stroke-width="6px"/>
+              <path d="M0,27 40,27" stroke="#FFF" stroke-width="6px"/>
+            </svg>
+          </a>
+        </div>
     </header>
 
 
@@ -120,13 +115,18 @@
         <div class="col-lg-4">
           <!-- Links bar area -->
           <div>Links</div>
-          <p>Here is where link bar will go</p>
+          <p>To-do item creation area</p>
         </div>
       </div>
     </section>
 
     <footer>
     <div class="container">
+      <div id="links">
+        <a href="https://github.com/Domenick97" target="_blank"><img src="images/github.png" alt="GitHub" class="icon-link" id="githubLink"/></a>
+        <a href="https://linkedin.com/in/domenickd" target="_blank"><img src="images/linkedIn.png" alt="LinkedIn" class="icon-link" id="linkedInLink"/></a>
+        <a href="http://domenickdibiase.com" target="_blank"><img src="images/DD.png" alt="Resume" class="icon-link" id="resumeLink"/></a>
+      </div>
       <div style="width:100%;text-align:center;" id="foot"> <span class="prompt" id="privacy">Privacy Policy</span> <span style="color:#bbb">|</span> <span class="prompt">&copy; Copyright 2018</span></div>
     </div>
   </footer>
