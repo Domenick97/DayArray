@@ -25,7 +25,7 @@ function initAll(){
     privacy.onclick = privClick;
 }
 function topp(){
-  alert("You Clicked the purp");
+  alert("Sorry the sorting and filter options are not currently set up.");
 }
 
 function initResize(){

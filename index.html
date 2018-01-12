@@ -19,7 +19,7 @@
     <meta name="author" content="Domenick DiBiase">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="images/favicon2.ico" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -29,106 +29,86 @@
   </head>
   <body>
 
-    <header class="bg-theme container-fluid">
+    <header class="header-theme container-fluid">
         <div id="title">
           <p>Day Array</p>
         </div>
         <div id="drop-down">
-          <a onclick="slideMenuOpen()" style="float:left">
-            <svg width="36px" height="36px">
+          <a onclick="slideMenuOpen()" style="float:left;padding:10px;margin:0;">
+            <svg width="36px" height="30px">
               <path d="M0,3 36,3" stroke="#FFF" stroke-width="6px"/>
-              <path d="M0,15 40,15" stroke="#FFF" stroke-width="6px"/>
-              <path d="M0,27 40,27" stroke="#FFF" stroke-width="6px"/>
+              <path d="M0,15 36,15" stroke="#FFF" stroke-width="6px"/>
+              <path d="M0,27 36,27" stroke="#FFF" stroke-width="6px"/>
             </svg>
           </a>
         </div>
     </header>
 
-
     <section>
-      <div class="item-theme" id="s">Place for Sort By and Filter Hub</div>
+      <div class="hub-theme" id="hub">
+        <form>
+          Sort by:
+          <select name="sort" id="s" style="height:30px;border:1px solid #222;background-color:#FFF;border-radius: 3px;">
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+            <option value="priority-low-high">Priority Low to High</option>
+            <option value="priority-high-low">Priority High to Low</option>
+          </select>
+
+          Filter:
+          <select name="filter" id="s" style="height:30px;border:1px solid #222;background-color:#FFF;border-radius: 3px;">
+            <option value="first">First</option>
+          </select>
+        </form>
+      </div>
       <!-- Main section -->
-      <div class="conatiner row justify-content-center" >
+      <div class="container-fluid">
+      <div class="row" >
         <div class="col-lg-6">
           <!-- Main list area -->
           <div class="item item-theme">
-            <p>First</p>
+            <p>Test item 1</p>
           </div>
           <div class="item item-theme">
-            <p>Second</p>
+            <p>Test item 2</p>
           </div>
           <div class="item item-theme">
-            <p>Third</p>
+            <p>Test item 3</p>
           </div>
           <div class="item item-theme">
-            <p>Forth</p>
+            <p>Test item 4</p>
           </div>
           <div class="item item-theme">
-            <p>Fifth</p>
+            <p>Test item 5</p>
           </div>
           <div class="item item-theme">
-            <p>Second</p>
+            <p>Test item 6</p>
           </div>
-          <div class="item item-theme">
-            <p>First</p>
-          </div>
-          <div class="item item-theme">
-            <p>Second</p>
-          </div>
-          <div class="item item-theme">
-            <p>First</p>
-          </div>
-          <div class="item item-theme">
-            <p>Second</p>
-          </div>
-          <div class="item item-theme">
-            <p>First</p>
-          </div>
-          <div class="item item-theme">
-            <p>Second</p>
-          </div>
-          <div class="item item-theme">
-            <p>First</p>
-          </div>
-          <div class="item item-theme">
-            <p>Second</p>
-          </div>
-          <div class="item item-theme">
-            <p>First</p>
-          </div>
-          <div class="item item-theme">
-            <p>Second</p>
-          </div>
-          <div class="item item-theme">
-            <p>First</p>
-          </div>
-          <div class="item item-theme">
-            <p>Second</p>
-          </div>
-          <div class="item item-theme">
-            <p>First</p>
-          </div>
-          <div class="item item-theme">
-            <p>Second</p>
-          </div>
+
+
         </div>
         <div class="col-lg-4">
           <!-- Links bar area -->
-          <div>Links</div>
           <p>To-do item creation area</p>
         </div>
       </div>
+    </div>
     </section>
 
-    <footer>
-    <div class="container">
-      <div id="links">
-        <a href="https://github.com/Domenick97" target="_blank"><img src="images/github.png" alt="GitHub" class="icon-link" id="githubLink"/></a>
-        <a href="https://linkedin.com/in/domenickd" target="_blank"><img src="images/linkedIn.png" alt="LinkedIn" class="icon-link" id="linkedInLink"/></a>
-        <a href="http://domenickdibiase.com" target="_blank"><img src="images/DD.png" alt="Resume" class="icon-link" id="resumeLink"/></a>
-      </div>
-      <div style="width:100%;text-align:center;" id="foot"> <span class="prompt" id="privacy">Privacy Policy</span> <span style="color:#bbb">|</span> <span class="prompt">&copy; Copyright 2018</span></div>
-    </div>
-  </footer>
+
+        <footer style="text-align:center;" class="row justify-content-center">
+          <div  id="foot">
+            <span class="prompt" id="privacy">Privacy Policy</span>
+            <span style="color:#bbb">|</span>
+            <span class="prompt">&copy; Copyright 2018</span>
+          </div>
+
+          <div id="links">
+            <a href="https://github.com/Domenick97" target="_blank"><img src="images/github.png" alt="GitHub" class="icon-link" id="githubLink"/></a>
+            <a href="https://linkedin.com/in/domenickd" target="_blank"><img src="images/linkedIn.png" alt="LinkedIn" class="icon-link" id="linkedInLink"/></a>
+            <a href="http://domenickdibiase.com" target="_blank"><img src="images/DD.png" alt="Resume" class="icon-link" id="resumeLink"/></a>
+          </div>
+
+      </footer>
   </body>
 </html>

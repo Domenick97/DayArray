@@ -2,6 +2,13 @@ body{
   font: 16px/1.5 arial;
   margin: 0;
   padding: 0;
+  position: relative;
+
+}
+
+html, body{
+  height: 100%;
+    width: 100%;
 }
 
 .icon-link{
@@ -18,10 +25,21 @@ header{
   display: relative;
 }
 
+
+footer{
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  background-color: #DDD;
+  width: 100%;
+  padding-top: 15px;
+}
+
 #title{
   color:#EEE;
   line-height: 90px;
   width: 20%;
+  min-width: 300px;
   overflow: hidden;
   padding: 0;
   margin: 0px 0 15px 0;
@@ -30,24 +48,30 @@ header{
 /*  background-color: #FFF;*/
   display: inline-block;
   float:left;
+  font-weight:bold;
 }
+
 
 #drop-down{
   display: inline-block;
-  height: 30px;
 /*  background-color: #555;*/
-  width: 40px;
+
   position: absolute;
-  right:20px;
-  top:20px;
+  right:30px;
+  top:45px;
   z=1;
+  border: 2px solid #FFF;
 }
 
 #links{
-  width: 30%;
   min-width: 100px;
-  float: right;
   text-decoration: none;
+  padding-left: 20px;
+  float: left;
+}
+
+#hub{
+  margin-bottom: 15px;
 }
 
 .item{
@@ -56,14 +80,14 @@ header{
   margin-right: auto;
   margin-left: auto;
 
-  padding: 5px 0 5px;
+  padding: 10px 0 5px 20px;
   width: 98%;
   box-shadow: 2px 2px 3px 0px #CCC;
+  height: 60px;
+  font-size: 20px;
 }
 
 #listArea{
-
-
   float: left;
   background-color: #7B7D7D;
 }
