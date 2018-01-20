@@ -34,11 +34,11 @@
           <p>Day Array</p>
         </div>
         <div id="drop-down">
-          <a onclick="slideMenuOpen()" style="float:left;padding:10px;margin:0;">
-            <svg width="36px" height="30px">
+          <a onclick="slideMenuOpen()" style="height:52px;width:56px;float:left;padding:10px;margin:0;">
+            <svg width="36px" height="32px">
               <path d="M0,3 36,3" stroke="#FFF" stroke-width="6px"/>
-              <path d="M0,15 36,15" stroke="#FFF" stroke-width="6px"/>
-              <path d="M0,27 36,27" stroke="#FFF" stroke-width="6px"/>
+              <path d="M0,16 36,16" stroke="#FFF" stroke-width="6px"/>
+              <path d="M0,29 36,29" stroke="#FFF" stroke-width="6px"/>
             </svg>
           </a>
         </div>
@@ -48,7 +48,7 @@
       <div class="hub-theme" id="hub">
         <form>
           Sort by:
-          <select name="sort" id="s" style="height:30px;border:1px solid #222;background-color:#FFF;border-radius: 3px;">
+          <select name="sort" id="s" style="height:25px;border:1px solid #222;background-color:#FFF;border-radius: 3px;">
             <option value="A-Z">A-Z</option>
             <option value="Z-A">Z-A</option>
             <option value="priority-low-high">Priority Low to High</option>
@@ -56,18 +56,31 @@
           </select>
 
           Filter:
-          <select name="filter" id="s" style="height:30px;border:1px solid #222;background-color:#FFF;border-radius: 3px;">
+          <select name="filter" id="s" style="height:25px;border:1px solid #222;background-color:#FFF;border-radius: 3px;">
             <option value="first">First</option>
           </select>
         </form>
+
+        <div id="add">
+          +
+        </div>
+
       </div>
       <!-- Main section -->
       <div class="container-fluid">
-      <div class="row" >
-        <div class="col-lg-6">
+      <div class="row justify-content-center" >
+        <div class="col-lg-8 item-col">
           <!-- Main list area -->
           <div class="item item-theme">
-            <p>Test item 1</p>
+            <div class="item-main">
+              <p>Test item 1</p>
+            </div>
+            <div class="item-info">
+              <p>Description / Time / Day / Location</p>
+            </div>
+            <div class="item-edit">
+            </div>
+
           </div>
           <div class="item item-theme">
             <p>Test item 2</p>
@@ -87,16 +100,13 @@
 
 
         </div>
-        <div class="col-lg-4">
-          <!-- Links bar area -->
-          <p>To-do item creation area</p>
-        </div>
+
       </div>
     </div>
     </section>
 
 
-        <footer style="text-align:center;" class="row justify-content-center">
+        <footer style="text-align:center;" class="container-fluid row justify-content-center">
           <div  id="foot">
             <span class="prompt" id="privacy">Privacy Policy</span>
             <span style="color:#bbb">|</span>

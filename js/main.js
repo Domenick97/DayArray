@@ -41,6 +41,7 @@ function initResize(){
  */
 function privOver(){
   this.style.color = "#aaa";
+  document.body.style.cursor = "pointer";
 }
 
 /**
@@ -95,6 +96,7 @@ function privClick(){
  */
 function privOut(){
   this.style.color = "#0892D0";
+  document.body.style.cursor = "auto";
 }
 
 // Session Storage
