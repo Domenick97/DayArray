@@ -28,8 +28,8 @@ header{
 
 
 footer{
-  position: absolute;
-  bottom: 0;
+  /*position: absolute;
+  bottom: 0;*/
   height: 60px;
   background-color: #C9C9C9;
   width: 100%;
@@ -128,13 +128,35 @@ footer{
 }
 
 .item-edit{
-  width:30px;
-  background-color: #BBB;
+  width:26px;
+
+  background-color: #FFF;
   position: absolute;
   top:0;
   right:0;
-  height: 30px;
-  border-radius: 0 0 0 20px;
+  height: 26px;
+  border-radius: 10px 4px 10px 0px;
+  overflow: hidden;
+  transition: .4s;
+  box-shadow: inset 1px -1px 15px 2px #FFF;
+}
+
+.item-edit:hover{
+  border-radius: 15px 4px 15px 20px;
+  height: 28px;
+  width: 28px;
+  background-color: #CCC;
+
+}
+
+.item-edit img{
+  width: 14px;
+  height: 14px;
+  float: left;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transition: 1s;
 }
 
 
