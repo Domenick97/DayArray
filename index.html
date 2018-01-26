@@ -24,184 +24,108 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <script language="JavaScript" type="text/JavaScript" src="js/main.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="js/item.js"></script>
 
     <title>Day Array</title>
   </head>
   <body>
-<div style="min-height:calc(100% - 60px)">
-    <header class="header-theme container-fluid">
+    <div style="min-height:calc(100% - 90px); margin-bottom:30px;">
+      <header class="header-theme container-fluid">
         <div id="title">
           <p>Day Array</p>
         </div>
         <div id="drop-down">
-          <a onclick="slideMenuOpen()" style="height:48px;width:52px;float:left;padding:10px;margin:0;">
-            <svg width="32px" height="28px">
-              <path d="M0,3 36,3" stroke="#FFF" stroke-width="6px"/>
-              <path d="M0,14 36,14" stroke="#FFF" stroke-width="6px"/>
-              <path d="M0,25 36,25" stroke="#FFF" stroke-width="6px"/>
+          <a onclick="slideMenuOpen()" style="height:48px;width:50px;float:left;padding:10px;margin:0;">
+            <svg width="30px" height="28px">
+              <path d="M0,3 30,3" stroke="#FFF" stroke-width="6px"/>
+              <path d="M0,14 30,14" stroke="#FFF" stroke-width="6px"/>
+              <path d="M0,25 30,25" stroke="#FFF" stroke-width="6px"/>
             </svg>
           </a>
         </div>
-    </header>
+      </header>
 
-    <section>
-      <div class="hub-theme" id="hub">
-        <form>
-          Sort by:
-          <select name="sort" id="s" style="height:25px;border:1px solid #222;background-color:#FFF;border-radius: 3px;">
-            <option value="A-Z">A-Z</option>
-            <option value="Z-A">Z-A</option>
-            <option value="priority-low-high">Priority Low to High</option>
-            <option value="priority-high-low">Priority High to Low</option>
-          </select>
+      <section>
+        <div class="hub-theme" id="hub">
+          <form>
+            Sort by:
+            <select name="sort" id="s" style="height:25px;border:1px solid #222;background-color:#FFF;border-radius: 3px;">
+              <option value="A-Z">A-Z</option>
+              <option value="Z-A">Z-A</option>
+              <option value="priority-low-high">Priority Low to High</option>
+              <option value="priority-high-low">Priority High to Low</option>
+            </select>
 
-          Filter:
-          <select name="filter" id="s" style="height:25px;border:1px solid #222;background-color:#FFF;border-radius: 3px;">
-            <option value="first">First</option>
-          </select>
-        </form>
+            Filter:
+            <select name="filter" id="s" style="height:25px;border:1px solid #222;background-color:#FFF;border-radius: 3px;">
+              <option value="first">First</option>
+            </select>
+          </form>
 
-        <div id="add">
-          +
+          <div id="add" onclick="testAdd()">
+            +
+          </div>
         </div>
 
-      </div>
-      <!-- Main section -->
-      <div class="container-fluid">
-      <div class="row justify-content-center" >
-        <div class="col-lg-8 item-col">
-          <!-- Main list area -->
-          <div class="item item-theme">
-            <div class="item-main">
-              <p>Test item 1</p>
+        <!-- Main section -->
+        <div class="container-fluid row justify-content-center" style="padding-top:10px;" >
+          <div class="col-lg-8 item-col" id="stretch">
+            <!-- Main list area -->
+            <div class="item item-theme">
+              <div class="item-main">
+                <p>Test item 1</p>
+              </div>
+              <div class="item-info">
+                <p>Description / Time / Day / Location</p>
+              </div>
+              <div class="item-edit">
+                <img src="images/edit2.png"/>
+              </div>
             </div>
-            <div class="item-info">
-              <p>Description / Time / Day / Location</p>
+
+            <div class="item item-theme">
+              <div class="item-main">
+                <p>Test item 2</p>
+              </div>
+              <div class="item-info">
+                <p>Description / Time / Day / Location</p>
+              </div>
+              <div class="item-edit">
+                <img src="images/edit2.png"/>
+              </div>
             </div>
-            <div class="item-edit">
-              <img src="images/edit2.png"/>
+
+            <div class="item item-theme">
+              <div class="item-main">
+                <p>Test item 3</p>
+              </div>
+              <div class="item-info">
+                <p>Description / Time / Day / Location</p>
+              </div>
+              <div class="item-edit">
+                <img src="images/edit2.png"/>
+              </div>
             </div>
+
           </div>
-
-          <div class="item item-theme">
-            <div class="item-main">
-              <p>Test item 2</p>
-            </div>
-            <div class="item-info">
-              <p>Description / Time / Day / Location</p>
-            </div>
-            <div class="item-edit">
-              <img src="images/edit2.png"/>
-            </div>
-          </div>
-
-          <div class="item item-theme">
-            <div class="item-main">
-              <p>Test item 3</p>
-            </div>
-            <div class="item-info">
-              <p>Description / Time / Day / Location</p>
-            </div>
-            <div class="item-edit">
-              <img src="images/edit2.png"/>
-            </div>
-          </div>
-
-          <div class="item item-theme">
-            <div class="item-main">
-              <p>Test item 4</p>
-            </div>
-            <div class="item-info">
-              <p>Description / Time / Day / Location</p>
-            </div>
-            <div class="item-edit">
-              <img src="images/edit2.png"/>
-            </div>
-          </div>
-
-          <div class="item item-theme">
-            <div class="item-main">
-              <p>Test item 5</p>
-            </div>
-            <div class="item-info">
-              <p>Description / Time / Day / Location</p>
-            </div>
-            <div class="item-edit">
-              <img src="images/edit2.png"/>
-            </div>
-          </div>
-
-          <div class="item item-theme">
-            <div class="item-main">
-              <p>Test item 6</p>
-            </div>
-            <div class="item-info">
-              <p>Description / Time / Day / Location</p>
-            </div>
-            <div class="item-edit">
-              <img src="images/edit2.png"/>
-            </div>
-          </div>
-
-          <div class="item item-theme">
-            <div class="item-main">
-              <p>Test item 7</p>
-            </div>
-            <div class="item-info">
-              <p>Description / Time / Day / Location</p>
-            </div>
-            <div class="item-edit">
-              <img src="images/edit2.png"/>
-            </div>
-          </div>
-
-          <div class="item item-theme">
-            <div class="item-main">
-              <p>Test item 8</p>
-            </div>
-            <div class="item-info">
-              <p>Description / Time / Day / Location</p>
-            </div>
-            <div class="item-edit">
-              <img src="images/edit2.png"/>
-            </div>
-          </div>
-
-          <div class="item item-theme">
-            <div class="item-main">
-              <p>Test item 9</p>
-            </div>
-            <div class="item-info">
-              <p>Description / Time / Day / Location</p>
-            </div>
-            <div class="item-edit">
-              <img src="images/edit2.png"/>
-            </div>
-          </div>
-
-
 
         </div>
-
-      </div>
+      </section>
     </div>
-    </section>
 
-</div>
-        <footer style="text-align:center;" class="container-fluid row justify-content-center">
-          <div  id="foot">
-            <span class="prompt" id="privacy">Privacy Policy</span>
-            <span style="color:#bbb">|</span>
-            <span class="prompt">&copy; Copyright 2018</span>
-          </div>
+    <footer style="text-align:center;" class="container-fluid row justify-content-center">
+      <div  id="foot">
+        <span class="prompt" id="privacy">Privacy Policy</span>
+        <span style="color:#bbb">|</span>
+        <span class="prompt">&copy; Copyright 2018</span>
+      </div>
 
-          <div id="links">
-            <a href="https://github.com/Domenick97" target="_blank"><img src="images/github.png" alt="GitHub" class="icon-link" id="githubLink"/></a>
-            <a href="https://linkedin.com/in/domenickd" target="_blank"><img src="images/linkedIn.png" alt="LinkedIn" class="icon-link" id="linkedInLink"/></a>
-            <a href="http://domenickdibiase.com" target="_blank"><img src="images/DD.png" alt="Resume" class="icon-link" id="resumeLink"/></a>
-          </div>
+      <div id="links">
+        <a href="https://github.com/Domenick97" target="_blank"><img src="images/github.png" alt="GitHub" class="icon-link" id="githubLink"/></a>
+        <a href="https://linkedin.com/in/domenickd" target="_blank"><img src="images/linkedIn.png" alt="LinkedIn" class="icon-link" id="linkedInLink"/></a>
+        <a href="http://domenickdibiase.com" target="_blank"><img src="images/DD.png" alt="Resume" class="icon-link" id="resumeLink"/></a>
+      </div>
 
-      </footer>
-
+    </footer>
   </body>
 </html>

@@ -3,7 +3,6 @@ body{
   margin: 0;
   padding: 0;
   position: relative;
-/*  background-color: #f3f3f2;*/
 }
 
 html, body{
@@ -11,29 +10,26 @@ html, body{
     width: 100%;
 }
 
-.icon-link{
-  height: 2em;
-  width: 2em;
-}
-
 header{
   width: 100%;
   color: #FFFFFF;
-  height: 120px;
+  height: 100px;
   overflow: hidden;
   /*box-shadow: inset 0px -4px 10px 0px #2A8ACA;*/
   /*box-shadow: inset 0px -2px 3px 0px #2A8ACA;*/
   display: relative;
 }
 
-
 footer{
-  /*position: absolute;
-  bottom: 0;*/
   height: 60px;
   background-color: #C9C9C9;
   width: 100%;
   padding-top: 15px;
+}
+
+.icon-link{
+  height: 2em;
+  width: 2em;
 }
 
 #title{
@@ -43,10 +39,9 @@ footer{
   min-width: 300px;
   overflow: hidden;
   padding: 0;
-  margin: 40px 0 15px 0;
+  margin: 30px 0 15px 0;
   font-size: 40px;
   padding-left: 70px;
-/*  background-color: #FFF;*/
   display: inline-block;
   float:left;
   font-weight:bold;
@@ -55,11 +50,9 @@ footer{
 
 #drop-down{
   display: inline-block;
-/*  background-color: #555;*/
-
   position: absolute;
   right:32px;
-  top:32px;
+  top:26px;
   z=1;
   border: 2px solid #FFF;
   border-radius: 2px;
@@ -80,7 +73,6 @@ footer{
   margin-bottom: 5px;
   text-align: center;
   position: relative;
-
 }
 
 #add{
@@ -89,7 +81,6 @@ footer{
   right: 30px;
   height: 45px;
   width: 45px;
-  /*border: 2px solid #444;*/
   border-radius: 2px;
   background-color: #BBB;
   font-weight: bold;
@@ -108,17 +99,21 @@ footer{
   cursor: pointer;
 }
 
+.item-col{
+  max-width: 1000px;
+}
+
+/*
+  Styling for to-do items
+*/
 .item{
-  margin-top: 12px;
   margin-bottom: 14px;
   margin-right: auto;
   margin-left: auto;
-
   padding: 10px 0 5px 20px;
   width: 98%;
   box-shadow: 2px 2px 3px 0px #CCC;
   min-height: 80px;
-
   background-color: #FFF;
   position: relative;
 }
@@ -129,7 +124,6 @@ footer{
 
 .item-edit{
   width:26px;
-
   background-color: #FFF;
   position: absolute;
   top:0;
@@ -146,7 +140,6 @@ footer{
   height: 28px;
   width: 28px;
   background-color: #CCC;
-
 }
 
 .item-edit img{
@@ -157,9 +150,4 @@ footer{
   top: 5px;
   right: 5px;
   transition: 1s;
-}
-
-
-.item-col{
-  max-width: 1000px;
 }

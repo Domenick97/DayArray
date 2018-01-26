@@ -99,6 +99,13 @@ function privOut(){
   document.body.style.cursor = "auto";
 }
 
+/**
+ * Test function to add a to-do item
+ */
+function testAdd(){
+  new item("Test JS Title", "Test JS Desc").add();
+}
+
 // Session Storage
 // JS for list of undo's storing the deleted todo's
 
