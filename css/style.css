@@ -28,12 +28,12 @@ footer{
 }
 
 .icon-link{
-  height: 2em;
-  width: 2em;
+  height: 1.5em;
+  width: 1.5em;
 }
 
 #title{
-  color:#EEE;
+  color:#FFF;
   line-height: 40px;
   width: 20%;
   min-width: 300px;
@@ -45,8 +45,8 @@ footer{
   display: inline-block;
   float:left;
   font-weight:bold;
+  transition: 1s;
 }
-
 
 #drop-down{
   display: inline-block;
@@ -60,6 +60,17 @@ footer{
 
 #drop-down:hover{
   background-color: #BBB;
+}
+
+@media screen and (max-width:500px){
+  #title{
+    padding-left: 25px;
+  }
+
+  #drop-down{
+    right: 25px;
+  }
+
 }
 
 #links{

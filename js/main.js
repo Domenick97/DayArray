@@ -1,7 +1,5 @@
-//document.getElementByID().addEventListener('');
 window.onload = initAll;
 window.addEventListener("resize", initResize);
-
 
 //document.getElementById("title").addEventListener("click", topp);
 //document.getElementById("title").addEventListener("resize", topp);
@@ -15,7 +13,6 @@ function initAll(){
   theme.type = "text/css";
   theme.href = "css/themes/blue.css"
   document.getElementsByTagName("head")[0].appendChild(theme);
-
 
   // Coppied privacy policy from domenickdibiase.com
   var privacy = document.getElementById("privacy");
@@ -31,16 +28,14 @@ function topp(){
 function initResize(){
   var windWidth = window.innerWidth;
   //<div class="bg-purple" id="s">dfs</div>
-
   console.log(windWidth);
-
 }
 
 /**
  * Event for mouseover the privacy policy link.
  */
 function privOver(){
-  this.style.color = "#aaa";
+  this.style.color = "#555";
   document.body.style.cursor = "pointer";
 }
 
@@ -95,7 +90,7 @@ function privClick(){
  * Event for mouse out of the privacy policy link
  */
 function privOut(){
-  this.style.color = "#0892D0";
+  this.style.color = "#000";
   document.body.style.cursor = "auto";
 }
 
@@ -105,10 +100,3 @@ function privOut(){
 function testAdd(){
   new item("Test JS Title", "Test JS Desc").add();
 }
-
-// Session Storage
-// JS for list of undo's storing the deleted todo's
-
-//Local Storage
-// JS to store the has been here berfore info and settings
-// JS to store the to do list
