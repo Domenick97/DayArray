@@ -106,12 +106,24 @@ footer{
 }
 
 #addition-expansion{
-  height: 00px;
+  height:0px;
   overflow: hidden;
   background-color: #454545;
   z-index: 1;
-  transition: .8s;
+  transition: 1.5s;
   font-size: 16px;
+}
+
+.create{
+  height: 190px !important;
+  transition: 1.5s;
+}
+
+@media screen and (max-width:767px){
+  .create{
+    height: 330px !important;
+    transition: 1.5s;
+  }
 }
 
 .input-item{
@@ -174,7 +186,7 @@ footer{
   background-color: #ABB2B9;
   border: 1px solid #566573;
   border-radius: 4px;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .btn-sty:focus{
