@@ -100,5 +100,5 @@ function privOut(){
 function testAdd(){
   new item("Test JS Title", "Test JS Desc").add();
 
-  document.getElementById("addition-expansion").style.height = "220px";
+  document.getElementById("addition-expansion").style.height = "100%";
 }

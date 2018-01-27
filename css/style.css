@@ -112,8 +112,6 @@ footer{
   z-index: 1;
   transition: .8s;
   font-size: 16px;
-  padding-left: 30px;
-  padding-right: 30px;
 }
 
 .input-item{
@@ -125,6 +123,12 @@ footer{
   font-size: 20px;
   padding-left: 10px;
   color: #FFF;
+  width: 100%;
+}
+
+.input-item-min{
+  line-height: 30px !important;
+  font-size: 16px !important;
 }
 
 .input-item::placeholder{
@@ -141,6 +145,7 @@ footer{
 #addition-expansion textarea{
   font-size: 16px;
   resize:none;
+  height:100px;
 }
 
 #addition-expansion textarea::-webkit-scrollbar {
@@ -163,6 +168,23 @@ footer{
 #addition-expansion textarea::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+
+.btn-sty{
+  background-color: #ABB2B9;
+  border: 1px solid #566573;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.btn-sty:focus{
+  outline:none;
+}
+
+.btn-sty:hover{
+  background-color: #D5D8DC;
+}
+
 
 .item-col{
   max-width: 1000px;
