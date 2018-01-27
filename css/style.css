@@ -105,6 +105,12 @@ footer{
   cursor: pointer;
 }
 
+#empty-default{
+  box-shadow: none !important;
+  text-align: center;
+  font-size: 20px;
+}
+
 #addition-expansion{
   height:0px;
   overflow: hidden;

@@ -114,6 +114,9 @@ function closeCreation(){
 }
 
 function createItem(){
+  if(document.getElementById('empty-default'))
+    document.getElementById('stretch').removeChild(document.getElementById('stretch').children[0]);
+
   var title = document.getElementById('input-title').value;
   document.getElementById('input-title').value = null;
   var desc = document.getElementById('input-description').value;
