@@ -115,6 +115,8 @@ function closeCreation(){
 
 function createItem(){
   var title = document.getElementById('input-title').value;
+  document.getElementById('input-title').value = null;
   var desc = document.getElementById('input-description').value;
+  document.getElementById('input-description').value = null;
   new item(title, desc).add();
 }
