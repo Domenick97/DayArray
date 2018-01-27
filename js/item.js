@@ -45,7 +45,7 @@ class item{
     pen.src = "images/edit2.png";
     shell.setAttribute("class","item item-theme");
     main.setAttribute("class",'item-main');
-    itemTitle.innerHTML = this.title + " " + this.num;
+    itemTitle.innerHTML = this.title;
     info.setAttribute("class","item-info");
     itemDesc.innerHTML = this.description;
     edit.setAttribute("class", "item-edit");

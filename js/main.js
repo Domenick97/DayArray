@@ -14,6 +14,8 @@ function initAll(){
   theme.href = "css/themes/blue.css"
   document.getElementsByTagName("head")[0].appendChild(theme);
 
+  document.getElementById("add").open = false;
+
   // Coppied privacy policy from domenickdibiase.com
   var privacy = document.getElementById("privacy");
     privacy.active = false;
@@ -97,9 +99,22 @@ function privOut(){
 /**
  * Test function to add a to-do item
  */
-function testAdd(){
-  new item("Test JS Title", "Test JS Desc").add();
+function openCreation(){
+  if(document.getElementById("add").open)
+    closeCreation();
+  else {
+    document.getElementById("addition-expansion").className = "create";
+    document.getElementById("add").open = true;
+  }
+}
 
-  //document.getElementById("addition-expansion").style.height = '100%';
-  document.getElementById("addition-expansion").className = "create";
+function closeCreation(){
+  document.getElementById("addition-expansion").className = "";
+  document.getElementById("add").open = false;
+}
+
+function createItem(){
+  var title = document.getElementById('input-title').value;
+  var desc = document.getElementById('input-description').value;
+  new item(title, desc).add();
 }
