@@ -39,11 +39,13 @@ class item{
     var edit = document.createElement('div');
     var pen = new Image();
 
+
+    this.num = document.getElementById('stretch').children.length + 1;
     // Sets atributes to the elements
     pen.src = "images/edit2.png";
     shell.setAttribute("class","item item-theme");
     main.setAttribute("class",'item-main');
-    itemTitle.innerHTML = this.title;
+    itemTitle.innerHTML = this.title + " " + this.num;
     info.setAttribute("class","item-info");
     itemDesc.innerHTML = this.description;
     edit.setAttribute("class", "item-edit");
