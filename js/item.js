@@ -3,33 +3,16 @@
  *
  * @author Domenick DiBiase
  */
-class item{
-
-  /**
-   * Constructor for the item class, giving the item
-   * a title and Description
-   *
-   * @param title The title of the to-do item
-   * @param description Description given to the to-do item
-   */
-  constructor(title, description){
-    this.title = title;
-    this.description = description;
-  }
-
-  /**
-   * Adds a date atribute to the to-do item
-   *
-   * @param date The date given to the item
-   */
-  addDate(date){
-    this.date = date;
-  }
+function Item(title, description){
+  this.title = title;
+  this.description = description;
+  this.queue = document.getElementById('stretch').children.length;
 
   /**
    * Adds the item to the document page
    */
-  add(){
+  this.add = function(){
+
     // Creates elements
     var shell = document.createElement('div');
     var main = document.createElement('div');
@@ -38,9 +21,8 @@ class item{
     var itemDesc = document.createElement('p');
     var edit = document.createElement('div');
     var pen = new Image();
+    this.queue = document.getElementById('stretch').children.length;
 
-
-    this.num = document.getElementById('stretch').children.length + 1;
     // Sets atributes to the elements
     pen.src = "images/edit2.png";
     shell.setAttribute("class","item item-theme");
@@ -49,6 +31,8 @@ class item{
     info.setAttribute("class","item-info");
     itemDesc.innerHTML = this.description;
     edit.setAttribute("class", "item-edit");
+    var index = this.queue;
+    edit.onclick = function(){removeItem(index)};
 
     // Appends the elements together
     edit.appendChild(pen);
@@ -61,9 +45,7 @@ class item{
     // Appends the elements to the document page
     var rost = document.getElementById('stretch');
     rost.appendChild(shell);
-
-    //alert("Added");
-  }
+  };
 }
 
 // Session Storage

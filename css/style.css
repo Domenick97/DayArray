@@ -257,3 +257,26 @@ footer{
   right: 5px;
   transition: 1s;
 }
+
+.item-delete{
+  width:26px;
+  background-color: #FFF;
+  position: absolute;
+  bottom:0;
+  right:0;
+  height: 26px;
+  border-radius: 10px 4px 10px 0px;
+  overflow: hidden;
+  transition: .4s;
+  box-shadow: inset 1px -1px 15px 2px #FFF;
+}
+
+.item-delete img{
+  width: 14px;
+  height: 14px;
+  float: left;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  transition: 1s;
+}

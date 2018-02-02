@@ -1,8 +1,7 @@
 window.onload = initAll;
 window.addEventListener("resize", initResize);
 
-//document.getElementById("title").addEventListener("click", topp);
-//document.getElementById("title").addEventListener("resize", topp);
+var array;
 
 // Initializes all of the
 function initAll(){
@@ -16,21 +15,26 @@ function initAll(){
 
   document.getElementById("add").open = false;
 
+  array = [];
+
   // Coppied privacy policy from domenickdibiase.com
   var privacy = document.getElementById("privacy");
-    privacy.active = false;
-    privacy.onmouseover = privOver;
-    privacy.onmouseout = privOut;
-    privacy.onclick = privClick;
+  privacy.active = false;
+  privacy.onmouseover = privOver;
+  privacy.onmouseout = privOut;
+  privacy.onclick = privClick;
 }
+
+/**
+ * Temporary error message
+ */
 function topp(){
   alert("Sorry the sorting and filter options are not currently set up.");
 }
 
 function initResize(){
   var windWidth = window.innerWidth;
-  //<div class="bg-purple" id="s">dfs</div>
-  console.log(windWidth);
+  //console.log(windWidth);
 }
 
 /**
@@ -97,7 +101,7 @@ function privOut(){
 }
 
 /**
- * Test function to add a to-do item
+ * Opens the creation section for an item
  */
 function openCreation(){
   if(document.getElementById("add").open)
@@ -108,11 +112,17 @@ function openCreation(){
   }
 }
 
+/**
+ * Closes the creation section for an item
+ */
 function closeCreation(){
   document.getElementById("addition-expansion").className = "";
   document.getElementById("add").open = false;
 }
 
+/**
+ * Creates an Item adding it to the list and displaying it to the user.
+ */
 function createItem(){
   if(document.getElementById('empty-default'))
     document.getElementById('stretch').removeChild(document.getElementById('stretch').children[0]);
@@ -121,5 +131,18 @@ function createItem(){
   document.getElementById('input-title').value = null;
   var desc = document.getElementById('input-description').value;
   document.getElementById('input-description').value = null;
-  new item(title, desc).add();
+  var next = new Item(title, desc);
+  next.add();
+  array.push(next);
+}
+
+function removeItem(itemIndex){
+  array.splice(parseInt(itemIndex), 1);
+  var parent = document.getElementById('stretch');
+  while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+  }
+  for(var i = 0; i < array.length; i++){
+    array[i].add()
+  }
 }
