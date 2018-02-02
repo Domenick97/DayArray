@@ -222,6 +222,7 @@ footer{
   min-height: 80px;
   background-color: #FFF;
   position: relative;
+  overflow: hidden;
 }
 
 .item-main{
@@ -229,23 +230,16 @@ footer{
 }
 
 .item-edit{
-  width:26px;
-  background-color: #FFF;
+  width:24px;
+  height: 24px;
+  background-color: #BBB;
+  border-radius: 50%;
+  box-shadow: inset 1px -1px 15px 2px #FFF;
   position: absolute;
   top:0;
   right:0;
-  height: 26px;
-  border-radius: 10px 4px 10px 0px;
   overflow: hidden;
   transition: .4s;
-  box-shadow: inset 1px -1px 15px 2px #FFF;
-}
-
-.item-edit:hover{
-  border-radius: 15px 4px 15px 20px;
-  height: 28px;
-  width: 28px;
-  background-color: #CCC;
 }
 
 .item-edit img{
@@ -259,16 +253,16 @@ footer{
 }
 
 .item-delete{
-  width:26px;
-  background-color: #FFF;
+  width:24px;
+  height: 24px;
+  background-color: #BBB;
+  border-radius: 50%;
+  box-shadow: inset 1px -1px 15px 2px #FFF;
   position: absolute;
-  bottom:0;
+  top:24px;
   right:0;
-  height: 26px;
-  border-radius: 10px 4px 10px 0px;
   overflow: hidden;
   transition: .4s;
-  box-shadow: inset 1px -1px 15px 2px #FFF;
 }
 
 .item-delete img{
@@ -276,7 +270,7 @@ footer{
   height: 14px;
   float: left;
   position: absolute;
-  bottom: 5px;
+  top: 5px;
   right: 5px;
   transition: 1s;
 }
