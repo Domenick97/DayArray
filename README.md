@@ -4,11 +4,11 @@ http://dayarray.com
 
 Site for users to create a ToDo list that will save through cookies for them to come back to.
 
-> Currently in Alpha
+> Currently in Beta
 
 ## Features
 
-- [ ] Create and Remove ToDo items
+- [x] Create and Remove ToDo items
 - [ ] Mark items as completed
 - [ ] Sort ToDo items
 - [ ] Display the ToDo items by day, type, ect.
