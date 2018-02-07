@@ -53,6 +53,8 @@ function privClick(){
 
   if(this.active == true){
     (document.getElementById("policy")).parentNode.removeChild(document.getElementById("policy"));
+    document.getElementsByTagName('footer')[0].style.transition = ".5s";
+    document.getElementsByTagName('footer')[0].style.height = "60px";
     this.active = false;
     return;
   }
@@ -86,10 +88,15 @@ function privClick(){
   var p4 = document.createElement('p');
   p4.innerHTML = "Refer to Google's Privacy and Terms page to learn more about how to opt out of Google's advertising tracking cookie.";
   policy.appendChild(p4);
-  this.after(policy);
+  //this.after(policy);
+  policy.style.paddingTop = "25px";
+  policy.style.paddingBottom = "60px";
+  document.getElementsByTagName('footer')[0].appendChild(policy);
+  document.getElementsByTagName('footer')[0].style.transition = "none";
+  document.getElementsByTagName('footer')[0].style.height = "30%";
 
 
-  window.scrollTo(0,document.body.scrollHeight);
+  window.scroll({ top: 2500, left: 0, behavior: 'smooth' });
 }
 
 /**
