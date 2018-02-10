@@ -6,7 +6,8 @@ var array;
 // Initializes all of the
 function initAll(){
   // Temporary error message for the sort and filter options
-  document.getElementById("s").addEventListener("click", topp);
+  if( document.getElementById("s") != null )
+    document.getElementById("s").addEventListener("click", topp);
 
   // Loads specific style sheet specified by the users settings
   var theme = document.createElement("link");
