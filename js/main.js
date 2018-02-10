@@ -1,28 +1,110 @@
 window.onload = initAll;
-window.addEventListener("resize", initResize);
+//window.addEventListener("resize", initResize);
 
 var array;
 
 // Initializes all of the
 function initAll(){
+  // Temporary error message for the sort and filter options
   document.getElementById("s").addEventListener("click", topp);
 
+  // Loads specific style sheet specified by the users settings
   var theme = document.createElement("link");
   theme.rel = "stylesheet";
   theme.type = "text/css";
   theme.href = "css/themes/blue.css"
   document.getElementsByTagName("head")[0].appendChild(theme);
 
+  // Initializes creation menu status
   document.getElementById("add").open = false;
 
   array = [];
 
   // Coppied privacy policy from domenickdibiase.com
+  // Initializes the privacy policy area
   var privacy = document.getElementById("privacy");
   privacy.active = false;
   privacy.onmouseover = privOver;
   privacy.onmouseout = privOut;
   privacy.onclick = privClick;
+
+  // Load saved items in the list
+  loadItems();
+}
+
+/**
+ * Loads in the items saved in local storage
+ */
+function loadItems(){
+  // Array of saved items
+  var arrayLoad = JSON.parse(localStorage.getItem('list'));
+
+  // If there there are items in local storage then remove
+  // the default empty message
+  if ( arrayLoad.length == 0 )
+    defaultMessage();
+
+  // Create items from local storage, adds them to the screen,
+  // and adds them to the array
+  for(var i = 0; i < arrayLoad.length; i++){
+     var next = new Item(arrayLoad[i].title, arrayLoad[i].description);
+     next.add();
+     array.push(next);
+  }
+}
+
+ /**
+  * Autosaves the list after every update
+  */
+  function autoSave(){
+    localStorage.setItem('list', JSON.stringify(array));
+  }
+
+ /**
+ * Creates an Item adding it to the list and displaying it to the user.
+ */
+function createItem(){
+  if(document.getElementById('empty-default'))
+    document.getElementById('stretch').removeChild(document.getElementById('stretch').children[0]);
+
+  var title = document.getElementById('input-title').value;
+  document.getElementById('input-title').value = null;
+  var desc = document.getElementById('input-description').value;
+  document.getElementById('input-description').value = null;
+  var next = new Item(title, desc);
+  next.add();
+  array.push(next);
+  autoSave();
+}
+
+/**
+ * Removes the item at the index given
+ *
+ * @param itemIndex index of the item to be removed
+ */
+function removeItem(itemIndex){
+  array.splice(parseInt(itemIndex), 1);
+  var parent = document.getElementById('stretch');
+  while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+  }
+  for(var i = 0; i < array.length; i++){
+    array[i].add()
+  }
+  autoSave();
+}
+
+/**
+ * Adds the default message for an empty list to the screen
+ */
+function defaultMessage(){
+  var deflt = document.createElement('div');
+  deflt.setAttribute("class", "item");
+  deflt.setAttribute("id", "empty-default");
+  var mid = document.createElement('p');
+  mid.innerHTML = "It looks like you have nothing on your to-do list.</br><span style='font-size:15px'>To add an item, click on the plus button in the top right.</span>";
+  deflt.appendChild(mid);
+  document.getElementById("stretch").appendChild(deflt);
 }
 
 /**
@@ -30,11 +112,6 @@ function initAll(){
  */
 function topp(){
   alert("Sorry the sorting and filter options are not currently set up.");
-}
-
-function initResize(){
-  var windWidth = window.innerWidth;
-  //console.log(windWidth);
 }
 
 /**
@@ -88,14 +165,14 @@ function privClick(){
   var p4 = document.createElement('p');
   p4.innerHTML = "Refer to Google's Privacy and Terms page to learn more about how to opt out of Google's advertising tracking cookie.";
   policy.appendChild(p4);
-  //this.after(policy);
+
   policy.style.paddingTop = "25px";
   policy.style.paddingBottom = "60px";
   document.getElementsByTagName('footer')[0].appendChild(policy);
   document.getElementsByTagName('footer')[0].style.transition = "none";
   document.getElementsByTagName('footer')[0].style.height = "30%";
 
-
+  // Scrolls to the bottom of the screen
   window.scroll({ top: 2500, left: 0, behavior: 'smooth' });
 }
 
@@ -125,31 +202,4 @@ function openCreation(){
 function closeCreation(){
   document.getElementById("addition-expansion").className = "";
   document.getElementById("add").open = false;
-}
-
-/**
- * Creates an Item adding it to the list and displaying it to the user.
- */
-function createItem(){
-  if(document.getElementById('empty-default'))
-    document.getElementById('stretch').removeChild(document.getElementById('stretch').children[0]);
-
-  var title = document.getElementById('input-title').value;
-  document.getElementById('input-title').value = null;
-  var desc = document.getElementById('input-description').value;
-  document.getElementById('input-description').value = null;
-  var next = new Item(title, desc);
-  next.add();
-  array.push(next);
-}
-
-function removeItem(itemIndex){
-  array.splice(parseInt(itemIndex), 1);
-  var parent = document.getElementById('stretch');
-  while (parent.firstChild) {
-      parent.removeChild(parent.firstChild);
-  }
-  for(var i = 0; i < array.length; i++){
-    array[i].add()
-  }
 }

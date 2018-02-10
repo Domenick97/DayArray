@@ -248,17 +248,19 @@ footer::-webkit-scrollbar-thumb:hover {
   font-size: 20px;
 }
 
-.item-edit{
+.item-edit, .item-delete{
   width:24px;
   height: 24px;
-  background-color: #BBB;
+  background-color: #CCC;
   border-radius: 50%;
-  box-shadow: inset 1px -1px 15px 2px #FFF;
+  box-shadow: inset 0px 0px 15px 1px #FFF;
   position: absolute;
-  top:0;
-  right:0;
   overflow: hidden;
   transition: .4s;
+}
+.item-edit{
+  top:0;
+  right:0;
 }
 
 .item-edit img{
@@ -272,16 +274,8 @@ footer::-webkit-scrollbar-thumb:hover {
 }
 
 .item-delete{
-  width:24px;
-  height: 24px;
-  background-color: #BBB;
-  border-radius: 50%;
-  box-shadow: inset 1px -1px 15px 2px #FFF;
-  position: absolute;
   top:24px;
   right:0;
-  overflow: hidden;
-  transition: .4s;
 }
 
 .item-delete img{
