@@ -2,7 +2,7 @@
 
 http://dayarray.com
 
-Site for users to create a ToDo list that will save through cookies for them to come back to.
+Site for users to create a ToDo list that saves through local storage for them to come back to.
 
 > Currently in Beta
 
@@ -19,7 +19,7 @@ Site for users to create a ToDo list that will save through cookies for them to 
 
 ### Learning Outcome
 
-While I have experience in languages like Java and C from the classes I have taken, I have not been taught web development. This website will grow and will increase in functionality as I learn the skills necessary to implement certain aspects. I am currently in the process of learning JavaScript and how to incorporate Bootstrap.
+While I have experience in languages like Java and C from the classes I have taken, I have not been taught web development. This website will grow and will increase in functionality as I learn the skills necessary to implement certain aspects.
 
 ### Links
 
