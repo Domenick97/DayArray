@@ -92,6 +92,8 @@ function removeItem(itemIndex){
     array[i].add()
   }
   autoSave();
+  if( array.length == 0 )
+    defaultMessage();
 }
 
 /**
@@ -180,7 +182,7 @@ function privClick(){
  * Event for mouse out of the privacy policy link
  */
 function privOut(){
-  this.style.color = "#000";
+  this.style.color = "#000";v
   document.body.style.cursor = "auto";
 }
 
