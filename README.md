@@ -9,12 +9,13 @@ Site for users to create a ToDo list that will save through cookies for them to 
 ## Features
 
 - [x] Create and Remove ToDo items
+- [x] ToDo List saves to local storage
 - [ ] Mark items as completed
 - [ ] Sort ToDo items
 - [ ] Display the ToDo items by day, type, ect.
 - [ ] Search the ToDo items
 - [ ] Change the theme of the site
-- [ ] ToDo List and Settings will save to local storage
+- [ ] User preferences save to local storage
 
 ### Learning Outcome
 
