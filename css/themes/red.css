@@ -1,10 +1,22 @@
-.bg-theme{
+.header-theme{
   background-color: #E74C3C;
+/*  border: 2px solid #2A8ACA;*
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;*/
 }
+
+.hub-theme{
+  background-color: #f1f1f0;
+  padding: 15px 0 15px 0;
+/*  color: #FFF;*/
+}
+
 .color-theme{
   color: #E74C3C;
 }
 .item-theme{
-  border: 3px solid #E74C3C;
-  border-radius: 5px;
+  border: 2px solid #E74C3C;
+  /*background-color: #85c4ed;*/
+  border-radius: 6px;
 }

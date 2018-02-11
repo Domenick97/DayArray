@@ -3,23 +3,28 @@ window.onload = initAll;
 
 var array;
 
-// Initializes all of the
+/**
+ * Initializes everything on window load
+ */
 function initAll(){
-  // Temporary error message for the sort and filter options
-  if( document.getElementById("s") != null )
-    document.getElementById("s").addEventListener("click", topp);
 
   // Loads specific style sheet specified by the users settings
-  var theme = document.createElement("link");
-  theme.rel = "stylesheet";
-  theme.type = "text/css";
-  theme.href = "css/themes/blue.css"
-  document.getElementsByTagName("head")[0].appendChild(theme);
+  loadTheme();
 
-  // Initializes creation menu status
-  document.getElementById("add").open = false;
-
+  // Initializes array
   array = [];
+
+  // If it is the main page
+  var pathname = window.location.pathname.split("/");
+  if(pathname[pathname.length - 1] == "index.html") {
+
+    // Temporary error message for the sort and filter options
+    document.getElementById("s").addEventListener("click", topp);
+    // Initializes creation menu status
+    document.getElementById("add").open = false;
+    // Load saved items in the list
+    loadItems();
+  }
 
   // Coppied privacy policy from domenickdibiase.com
   // Initializes the privacy policy area
@@ -28,9 +33,35 @@ function initAll(){
   privacy.onmouseover = privOver;
   privacy.onmouseout = privOut;
   privacy.onclick = privClick;
+}
 
-  // Load saved items in the list
-  loadItems();
+/**
+ * Loads the theme saved in local storage or sets it to default
+ */
+function loadTheme(){
+  var theme = document.createElement("link");
+  theme.rel = "stylesheet";
+  theme.type = "text/css";
+  var settings = JSON.parse(localStorage.getItem('settings'));
+
+  // If settings were not previously saved then make default settings
+  if(settings == null) {
+    settings = new Settings();
+  }
+
+  var index = settings.color;
+
+  if(index == 0){
+    theme.href = "css/themes/blue.css";
+  } else if (index == 1) {
+    theme.href = "css/themes/dark.css";
+  } else if (index == 2) {
+    theme.href = "css/themes/red.css";
+  } else {
+    theme.href = "css/themes/green.css";
+  }
+
+  document.getElementsByTagName("head")[0].appendChild(theme);
 }
 
 /**
@@ -42,7 +73,7 @@ function loadItems(){
 
   // If there there are items in local storage then remove
   // the default empty message
-  if ( arrayLoad.length == null || arrayLoad.length == 0 )
+  if ( arrayLoad == null || arrayLoad.length == 0 )
     defaultMessage();
 
   if ( arrayLoad != null ) {

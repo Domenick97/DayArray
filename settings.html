@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-
-
-
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <script language="JavaScript" type="text/JavaScript" src="js/main.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="js/settings.js"></script>
 
     <title>Day Array</title>
   </head>
@@ -68,11 +66,11 @@
                 <div class="input-group-prepend">
                   <label class="input-group-text" for="theme-color-input" style="min-width:150px">Theme Color</label>
                 </div>
-                <select class="custom-select" id="theme-color-input">
-                  <option value="1" selected>Blue</option>
-                  <option value="2">Black</option>
-                  <option value="3">Red</option>
-                  <option value="4">Green</option>
+                <select class="custom-select" id="theme-color-input" onclick="updateColor()">
+                  <option value="0">Blue</option>
+                  <option value="1">Black</option>
+                  <option value="2">Red</option>
+                  <option value="3">Green</option>
                 </select>
               </div>
             </div>
@@ -81,12 +79,12 @@
             <div class="row justify-content-center" style="padding-bottom:24px;padding-left:24px;padding-right:24px">
               <div class="input-group mb-2">
                 <div class="input-group-prepend">
-                  <label class="input-group-text" for="theme-color-input" style="min-width:150px">Save List</label>
+                  <label class="input-group-text" for="save-preference" style="min-width:150px">Save List</label>
                 </div>
-                <select class="custom-select" id="theme-color-input">
-                  <option value="1" selected>Local Storage</option>
-                  <option value="2">Session Storage</option>
-                  <option value="3">Don't Save</option>
+                <select class="custom-select" id="save-preference" onclick="updateSave()">
+                  <option value="0">Local Storage</option>
+                  <option value="1">Session Storage</option>
+                  <option value="2">Don't Save</option>
                 </select>
               </div>
             </div>
@@ -106,9 +104,9 @@
     </div>
 
     <div id="links">
-      <a href="https://github.com/Domenick97" target="_blank"><img src="images/github.png" alt="GitHub" rel="noopener" class="icon-link" id="githubLink"/></a>
-      <a href="https://linkedin.com/in/domenickd" target="_blank"><img src="images/linkedIn.png" alt="LinkedIn" rel="noopener" class="icon-link" id="linkedInLink"/></a>
-      <a href="http://domenickdibiase.com" target="_blank"><img src="images/DD.png" alt="Resume" rel="noopener" class="icon-link" id="resumeLink"/></a>
+      <a href="https://github.com/Domenick97" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub" class="icon-link" id="githubLink"/></a>
+      <a href="https://linkedin.com/in/domenickd" target="_blank" rel="noopener"><img src="images/linkedIn.png" alt="LinkedIn" class="icon-link" id="linkedInLink"/></a>
+      <a href="http://domenickdibiase.com" target="_blank" rel="noopener"><img src="images/DD.png" alt="Resume" class="icon-link" id="resumeLink"/></a>
     </div>
   </div>
   </footer>
