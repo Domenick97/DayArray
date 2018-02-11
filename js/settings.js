@@ -25,6 +25,7 @@ function updateColor(){
   var c = document.getElementById("theme-color-input");
   settings.color = c.options[c.selectedIndex].value;
   localStorage.setItem('settings', JSON.stringify(settings));
+  location.reload();
 }
 
 /**

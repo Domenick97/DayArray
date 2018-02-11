@@ -16,7 +16,7 @@ function initAll(){
 
   // If it is the main page
   var pathname = window.location.pathname.split("/");
-  if(pathname[pathname.length - 1] == "index.html") {
+  if(pathname[pathname.length - 1] != "settings.html") {
 
     // Temporary error message for the sort and filter options
     document.getElementById("s").addEventListener("click", topp);
