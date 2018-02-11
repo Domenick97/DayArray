@@ -1,10 +1,20 @@
-.bg-theme{
+.header-theme{
   background-color: #7B7D7D;
 }
+
+.hub-theme{
+  background-color: #f1f1f2;
+}
+
 .color-theme{
   color: #7B7D7D;
 }
+
 .item-theme{
-  border: 3px solid #7B7D7D;
-  border-radius: 5px;
+  border: 2px solid #7B7D7D;
+  border-radius: 6px;
+}
+
+#menu-settings:hover{
+  background-color: #7B7D7D;
 }

@@ -51,14 +51,24 @@ function loadTheme(){
 
   var index = settings.color;
 
-  if(index == 0){
-    theme.href = "css/themes/blue.css";
-  } else if (index == 1) {
-    theme.href = "css/themes/dark.css";
-  } else if (index == 2) {
+  if (index == 1) {
     theme.href = "css/themes/red.css";
-  } else {
+  } else if (index == 2) {
     theme.href = "css/themes/green.css";
+  } else if (index == 3) {
+    theme.href = "css/themes/orange.css";
+  } else if (index == 4) {
+    theme.href = "css/themes/yellow.css";
+  } else if (index == 5) {
+    theme.href = "css/themes/pink.css";
+  } else if (index == 6) {
+    theme.href = "css/themes/purple.css";
+  } else if (index == 7) {
+    theme.href = "css/themes/grey.css";
+  } else if (index == 8) {
+    theme.href = "css/themes/dark.css";
+  } else {
+    theme.href = "css/themes/blue.css";
   }
 
   document.getElementsByTagName("head")[0].appendChild(theme);
