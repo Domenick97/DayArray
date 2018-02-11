@@ -30,7 +30,8 @@ function Item(title, description){
     trash.src = "images/trash.png";
     shell.setAttribute("class","item item-theme");
     main.setAttribute("class",'item-main');
-    itemTitle.innerHTML = this.title;
+    itemTitle.innerHTML = this.title; // ~~
+    // main.innerHTML = this.title;
     info.setAttribute("class","item-info");
     itemDesc.innerHTML = this.description;
     edit.setAttribute("class", "item-edit");
@@ -86,7 +87,7 @@ function Item(title, description){
     edit.appendChild(pen);
     del.appendChild(trash);
     info.appendChild(itemDesc);
-    main.appendChild(itemTitle);
+    main.appendChild(itemTitle); // ~~
     shell.appendChild(main);
     shell.appendChild(info);
     shell.appendChild(edit);

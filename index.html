@@ -32,7 +32,7 @@
   <body>
     <div style="min-height:calc(100% - 90px); margin-bottom:30px;">
       <header class="header-theme container-fluid" style="box-shadow: 0 2px 5px #BBB">
-        <div id="title">
+        <div id="title-left">
           <p>Day Array</p>
         </div>
         <div id="drop-down">
@@ -45,6 +45,20 @@
           </a>
         </div>
       </header>
+
+      <!-- Slide Menu -->
+      <section id="slide-menu">
+        <div style="position:relative">
+          <a style="position:absolute;top:5px;right:20px;margin:0;font-size:40px;" onclick="slideMenuClose()" id="menu-dismiss">
+            &times;
+          </a>
+        </div>
+        <a href="settings.html" rel="noopener" alt="Settings">
+          <div id="menu-settings">
+            Settings
+          </div>
+        </a>
+      </section>
 
       <section>
         <div class="hub-theme" id="hub">

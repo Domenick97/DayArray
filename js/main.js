@@ -26,6 +26,8 @@ function initAll(){
     loadItems();
   }
 
+  document.getElementById("slide-menu").open = false;
+
   // Coppied privacy policy from domenickdibiase.com
   // Initializes the privacy policy area
   var privacy = document.getElementById("privacy");
@@ -154,7 +156,7 @@ function topp(){
  * Event for mouseover the privacy policy link.
  */
 function privOver(){
-  this.style.color = "#555";
+  this.style.color = "#888";
   document.body.style.cursor = "pointer";
 }
 
@@ -238,4 +240,18 @@ function openCreation(){
 function closeCreation(){
   document.getElementById("addition-expansion").className = "";
   document.getElementById("add").open = false;
+}
+
+/**
+ * Opens the slide menu
+ */
+function slideMenuOpen(){
+  document.getElementById("slide-menu").style.width = "350px";
+}
+
+/**
+ * Closes the slide menu
+ */
+function slideMenuClose(){
+  document.getElementById("slide-menu").style.width = "0px";
 }

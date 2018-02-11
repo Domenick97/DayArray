@@ -51,7 +51,32 @@ footer::-webkit-scrollbar-thumb:hover {
   width: 1.5em;
 }
 
-#title{
+#arrow{
+  color:#FFF;
+  line-height: 40px;
+  width: 110px;
+  overflow: hidden;
+  padding: 0;
+  margin: 30px 0 15px 0;
+  padding-left: 60px;
+  display: inline-block;
+  float:left;
+  font-weight:bold;
+  transition: 1s;
+}
+
+#arrow:hover{
+  padding-left: 20px;
+  width: 95px;
+
+}
+
+#arrow polygon:hover{
+    stroke:#DDD;
+    fill: #DDD;
+}
+
+#title-left, #title-right{
   color:#FFF;
   line-height: 40px;
   width: 20%;
@@ -60,11 +85,18 @@ footer::-webkit-scrollbar-thumb:hover {
   padding: 0;
   margin: 30px 0 15px 0;
   font-size: 40px;
-  padding-left: 70px;
   display: inline-block;
   float:left;
   font-weight:bold;
   transition: 1s;
+}
+
+#title-left{
+  padding-left: 70px;
+}
+
+#title-right{
+  padding-left: 10px;
 }
 
 #drop-down{
@@ -90,7 +122,40 @@ footer::-webkit-scrollbar-thumb:hover {
   #drop-down{
     right: 25px;
   }
+}
 
+#slide-menu{
+  position:fixed;
+  right:0;
+  top:0;
+  bottom:0;
+  overflow:hidden;
+  height:100%;
+  width:0px;
+  background-color: #020204;
+  opacity: .85;
+  z-index:20;
+  transition: 1s;
+  color:#FFF;
+  font-size:30px;
+}
+
+#slide-menu a{
+  text-decoration: none;
+}
+
+#menu-dismiss:hover{
+  cursor: pointer;
+  color: #BBB;
+}
+
+#menu-settings{
+  margin-top:100px;
+  width:100%;
+  text-align: center;
+  color: #FFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #links{
@@ -101,9 +166,9 @@ footer::-webkit-scrollbar-thumb:hover {
 }
 
 #hub{
-  /*margin-bottom: 5px;*/
   text-align: center;
   position: relative;
+  padding: 15px 0 15px 0;
 }
 
 #add{
@@ -236,7 +301,7 @@ footer::-webkit-scrollbar-thumb:hover {
   margin-bottom: 14px;
   margin-right: auto;
   margin-left: auto;
-  padding: 10px 0 5px 20px;
+  padding: 10px 40px 5px 20px;
   width: 98%;
   box-shadow: 2px 2px 3px 0px #CCC;
   min-height: 80px;
@@ -247,6 +312,8 @@ footer::-webkit-scrollbar-thumb:hover {
 
 .item-main{
   font-size: 20px;
+  /*border-bottom: 1px solid #DDD;
+  padding-bottom: 5px;*/
 }
 
 .item-edit, .item-delete{

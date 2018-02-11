@@ -24,10 +24,13 @@ body{
 
 .hub-theme{
   background-color: #c1c1c0;
-  padding: 15px 0 15px 0;
 }
 
 footer{
   background-color: #353536;
   color: #aaa;
+}
+
+#menu-settings:hover{
+  background-color: #BBB;
 }

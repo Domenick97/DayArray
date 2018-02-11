@@ -8,8 +8,6 @@
 
 .hub-theme{
   background-color: #f1f1f0;
-  padding: 15px 0 15px 0;
-/*  color: #FFF;*/
 }
 
 .color-theme{
@@ -17,6 +15,8 @@
 }
 .item-theme{
   border: 2px solid #E74C3C;
-  /*background-color: #85c4ed;*/
   border-radius: 6px;
+}
+#menu-settings:hover{
+  background-color: #E74C3C;
 }
