@@ -36,13 +36,3 @@ function updateSave(){
   settings.save = s.options[s.selectedIndex].value;
   localStorage.setItem('settings', JSON.stringify(settings));
 }
-/**
- * Settings object that holds values for the theme Color,
- * save preference, and version number.
- */
-function Settings(){
-  // Initializes settings to default atributes
-  this.color = 1;
-  this.save = 1;
-  this.version = "1.0";
-}

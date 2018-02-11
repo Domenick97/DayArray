@@ -26,8 +26,6 @@ function initAll(){
     loadItems();
   }
 
-  document.getElementById("slide-menu").open = false;
-
   // Coppied privacy policy from domenickdibiase.com
   // Initializes the privacy policy area
   var privacy = document.getElementById("privacy");
@@ -254,4 +252,15 @@ function slideMenuOpen(){
  */
 function slideMenuClose(){
   document.getElementById("slide-menu").style.width = "0px";
+}
+
+/**
+ * Settings object that holds values for the theme Color,
+ * save preference, and version number.
+ */
+function Settings(){
+  // Initializes settings to default atributes
+  this.color = 0;
+  this.save = 1;
+  this.version = "1.0";
 }
