@@ -9,13 +9,13 @@ Site for users to create a ToDo list that saves through local storage for them t
 ## Features
 
 - [x] Create and Remove ToDo items
+- [x] Change the theme of the site
 - [x] ToDo List saves to local storage
+- [x] User preferences save to local storage
 - [ ] Mark items as completed
 - [ ] Sort ToDo items
 - [ ] Display the ToDo items by day, type, ect.
 - [ ] Search the ToDo items
-- [ ] Change the theme of the site
-- [ ] User preferences save to local storage
 
 ### Learning Outcome
 
