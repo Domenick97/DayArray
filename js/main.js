@@ -42,15 +42,17 @@ function loadItems(){
 
   // If there there are items in local storage then remove
   // the default empty message
-  if ( arrayLoad.length == 0 )
+  if ( arrayLoad.length == null || arrayLoad.length == 0 )
     defaultMessage();
 
-  // Create items from local storage, adds them to the screen,
-  // and adds them to the array
-  for(var i = 0; i < arrayLoad.length; i++){
-     var next = new Item(arrayLoad[i].title, arrayLoad[i].description);
-     next.add();
-     array.push(next);
+  if ( arrayLoad != null ) {
+    // Create items from local storage, adds them to the screen,
+    // and adds them to the array
+    for(var i = 0; i < arrayLoad.length; i++){
+       var next = new Item(arrayLoad[i].title, arrayLoad[i].description);
+       next.add();
+       array.push(next);
+    }
   }
 }
 

@@ -32,7 +32,7 @@
   </head>
   <body>
     <div style="min-height:calc(100% - 90px); margin-bottom:30px;">
-      <header class="header-theme container-fluid">
+      <header class="header-theme container-fluid" style="box-shadow: 0 2px 5px #BBB">
       <div id="title">
         <p>Day Array</p>
       </div>
@@ -48,16 +48,49 @@
     </header>
 
     <section>
-      <div class="hub-theme" id="hub">
-          Settings
-      </div>
-
 
       <!-- Main section -->
       <div class="container-fluid" style="padding-top:10px;" >
         <div class="row justify-content-center">
-          <div class="col-lg-8 item-col">
-              Stettings Options
+          <div class="col-md-10 item-col settings-hub" style="transition: 1.5s;">
+
+            <!-- Setting title -->
+            <div class="row justify-content-center" style="background-color:#E9ecef;border-radius:4px 4px 0 0; padding-top:10px; padding-bottom:10px;font-size:22px">
+              Settings
+            </div>
+
+            <!-- Input for theme color -->
+            <div class="row justify-content-center" style="padding:24px">
+              <!-- Temporary Message -->
+              Currently the setting options are not operational and will stay at their default settings.</br></br>
+
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="theme-color-input" style="min-width:150px">Theme Color</label>
+                </div>
+                <select class="custom-select" id="theme-color-input">
+                  <option value="1" selected>Blue</option>
+                  <option value="2">Black</option>
+                  <option value="3">Red</option>
+                  <option value="4">Green</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Input for saving the list items -->
+            <div class="row justify-content-center" style="padding-bottom:24px;padding-left:24px;padding-right:24px">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="theme-color-input" style="min-width:150px">Save List</label>
+                </div>
+                <select class="custom-select" id="theme-color-input">
+                  <option value="1" selected>Local Storage</option>
+                  <option value="2">Session Storage</option>
+                  <option value="3">Don't Save</option>
+                </select>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

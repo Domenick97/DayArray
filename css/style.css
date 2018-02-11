@@ -22,7 +22,7 @@ header{
 
 footer{
   height: 60px;
-  background-color: #C9C9C9;
+  background-color:#C4CED7; /* #C9C9C9;*/
   width: 100%;
   padding-top: 15px;
   overflow: auto;
@@ -74,7 +74,8 @@ footer::-webkit-scrollbar-thumb:hover {
   top:26px;
   z=1;
   border: 2px solid #FFF;
-  border-radius: 2px;
+  border-radius: 4px;
+  transition: .4s;
 }
 
 #drop-down:hover{
@@ -114,7 +115,7 @@ footer::-webkit-scrollbar-thumb:hover {
   border-radius: 2px;
   background-color: #BBB;
   padding: 7px;
-  transition: 1s;
+  transition: .8s;
 }
 
 #add:hover{
@@ -286,4 +287,12 @@ footer::-webkit-scrollbar-thumb:hover {
   top: 5px;
   right: 5px;
   transition: 1s;
+}
+
+
+.settings-hub{
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  margin-top: 20px;
+  max-width: 1000px;
 }
