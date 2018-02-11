@@ -1,5 +1,5 @@
 body{
-  background-color: #030305;
+  background-color: #040406;
 }
 
 .bg-theme{
@@ -8,10 +8,16 @@ body{
 .color-theme{
   color: #2C3E50;
 }
+
+.hub-theme{
+  background-color: #818180;
+}
+
 .item-theme{
   border: 2px solid #2C3E50;
   border-radius: 6px;
   background-color: #666;
+  box-shadow: 2px 2px 3px 0px #333;
 }
 
 .header-theme{
@@ -22,15 +28,15 @@ body{
   border-right: 0;*/
 }
 
-.hub-theme{
-  background-color: #c1c1c0;
-}
-
 footer{
   background-color: #353536;
   color: #aaa;
 }
 
+#slide-menu{
+  opacity: .93;
+}
+
 #menu-settings:hover{
-  background-color: #BBB;
+  background-color: #888;
 }

@@ -1,5 +1,5 @@
 .header-theme{
-  background-color: #D35400;
+  background-color: #E67E22;
 }
 
 .hub-theme{
@@ -7,14 +7,14 @@
 }
 
 .color-theme{
-  color: #D35400;
+  color: #E67E22;
 }
 
 .item-theme{
-  border: 2px solid #D35400;
+  border: 2px solid #E67E22;
   border-radius: 6px;
 }
 
 #menu-settings:hover{
-  background-color: #D35400;
+  background-color: #E67E22;
 }
