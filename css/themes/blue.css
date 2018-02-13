@@ -17,6 +17,6 @@
   border: 2px solid #3498DB;
   border-radius: 6px;
 }
-#menu-settings:hover{
+.menu-item:hover{
   background-color: #3498DB;
 }

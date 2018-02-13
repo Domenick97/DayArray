@@ -15,6 +15,6 @@
   border-radius: 6px;
 }
 
-#menu-settings:hover{
+.menu-item:hover{
   background-color: #F1C40F;
 }
