@@ -14,10 +14,14 @@ function initAll(){
   // Initializes array
   array = [];
 
-  // If it is the main page
+  // If it is the main page or not
   var pathname = window.location.pathname.split("/");
-  if(pathname[pathname.length - 1] != "settings.html") {
 
+  if(pathname[pathname.length - 1] == "settings.html" || pathname[pathname.length - 1] == "faq.html") {
+    document.getElementsByClassName('arrow-back')[0].onmouseover = function(){backAnimationOn()};
+    document.getElementsByClassName('arrow-back')[0].onmouseout = function(){backAnimationOff()};
+
+  } else {
     // Temporary error message for the sort and filter options
     document.getElementById("s").addEventListener("click", topp);
     // Initializes creation menu status
@@ -273,4 +277,24 @@ function Settings(){
   this.color = 0;
   this.save = 1;
   this.version = "1.0";
+}
+
+/**
+ * Animation for mousover on the back link
+ */
+function backAnimationOn(){
+  var arrow = document.getElementsByClassName('arrow')[0];
+  arrow.style.paddingLeft = "20px";
+  arrow.style.width = "90px";
+  var draw = document.getElementsByTagName('svg')[0];
+  draw.style.fill = '#D00';
+}
+
+/**
+ * Animation for mouseout on the back link
+ */
+function backAnimationOff(){
+  var arrow = document.getElementsByClassName('arrow')[0];
+  arrow.style.paddingLeft = "60px";
+  arrow.style.width = "100px";
 }
