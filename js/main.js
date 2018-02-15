@@ -17,7 +17,7 @@ function initAll(){
   // If it is the main page or not
   var pathname = window.location.pathname.split("/");
 
-  if(pathname[pathname.length - 1] == "settings.html" || pathname[pathname.length - 1] == "faq.html") {
+  if(pathname[pathname.length - 1] == "settings.html" || pathname[pathname.length - 1] == "faq.html" || pathname[pathname.length - 1] == "contact.html") {
     document.getElementsByClassName('arrow-back')[0].onmouseover = function(){backAnimationOn()};
     document.getElementsByClassName('arrow-back')[0].onmouseout = function(){backAnimationOff()};
 
@@ -298,3 +298,18 @@ function backAnimationOff(){
   arrow.style.paddingLeft = "60px";
   arrow.style.width = "100px";
 }
+
+/**
+ * Opens section in the FAQ page
+ */
+ function animateInfo(idNum){
+
+   var qinfo = document.getElementById('info' + idNum);
+   if( qinfo.open == null || !qinfo.open ){
+     qinfo.style.maxHeight = window.innerHeight + "px";
+     qinfo.open = true;
+   } else {
+     qinfo.style.maxHeight = "0px";
+     qinfo.open = false;
+   }
+ }

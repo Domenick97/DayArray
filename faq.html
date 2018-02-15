@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .question-title{
+        background-color:#f1f4f7;
+        padding-top:12px;
+        padding-bottom:12px;
+        font-size:22px;
+        border-top:1px solid #dadada;
+      }
+      .question-info{
+        max-height:0px;
+        overflow:hidden;
+        transition: max-height 1.5s;
+      }
+
+      .color-theme:hover{
+        color: #e1e1e1;
+        transition: 1s;
+      }
+    </style>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96903651-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+
+    <meta charset="UTF-8">
+    <meta name="description" content="To-do list application fequently asked questions">
+    <meta name="keywords" content="todo,to-do,day,array,dayarray,list,editor,questions,faq">
+    <meta name="author" content="Domenick DiBiase">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script language="JavaScript" type="text/JavaScript" src="js/main.js"></script>
+
+    <title>Day Array</title>
+  </head>
+  <body>
+    <div style="min-height:calc(100% - 90px); margin-bottom:30px;">
+      <header class="header-theme container-fluid" style="box-shadow: 0 2px 5px #BBB">
+        <a href="index.html" rel="noopener">
+          <div class="arrow-back">
+            <svg width="40" height="40" class="arrow">
+              <polygon stroke-linejoin="round"
+                points="6,20 32,8 32,32"
+                stroke="#FFF" stroke-width="8"
+                fill="#FFF"/>
+            </svg>
+            <div class="title title-back" style="display:inline;">Day Array</div>
+            <img src="images/favicon.ico" class="logo"/>
+          </div>
+        </a>
+    </header>
+
+    <section>
+
+      <!-- Main section -->
+      <div class="container-fluid" style="padding-top:10px;" >
+        <div class="row justify-content-center">
+          <div class="col-md-10 item-col settings-hub" style="transition: 1.5s; text-align:center;">
+
+            <!-- Setting title -->
+            <div class="row justify-content-center" style="background-color:#E9ecef;border-radius:4px 4px 0 0; padding-top:10px; padding-bottom:10px;font-size:22px">
+              Frequently Asked Questions
+            </div>
+
+            <!-- Input for theme color -->
+            <div class="row justify-content-center" style="padding:20px; text-align:center;">
+
+              <p>Don't see your question on here? Feel free to contact me directly at <a href="mailto:domenickdibiase@gmail.com" style="text-decoration:none;position:inline;" class="color-theme">domenickdibiase@gmail.com</a> or you can fill out a form online <a href="contact.html" rel="noopener" alt="Contact Page" class="color-theme">here</a>.</p></br>
+
+            </div>
+            <div class="row justify-content-center question-title" onclick="animateInfo(1)">
+              How to Create
+            </div>
+            <div class="question-info" id="info1">
+              Inner Create</br>he<br>
+            </div>
+            <div class="row justify-content-center question-title" onclick="animateInfo(2)">
+              Why do the filter and sort options not work?
+            </div>
+            <div class="question-info" id="info2">
+              Inner Create</br>he<br>
+            </div>
+            <div class="row justify-content-center question-title" onclick="animateInfo(3)">
+              How can I help?
+            </div>
+            <div class="question-info" id="info3">
+              Inner Create</br>he<br>
+            </div>
+            <div class="row justify-content-center question-title" onclick="animateInfo(4)">
+              How do I contact you?
+            </div>
+            <div class="question-info" id="info4">
+              Inner Create</br>he<br>
+            </div>
+            <div class="row justify-content-center question-title" onclick="animateInfo(5)">
+              How can I donate?
+            </div>
+            <div class="question-info" id="info5">
+              Inner Create</br>he<br>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer style="text-align:center;" class="container-fluid">
+    <div class="row justify-content-center">
+    <div  id="foot">
+      <span class="prompt" id="privacy">Privacy Policy</span>
+      <span style="color:#bbb">|</span>
+      <span class="prompt">&copy; Copyright 2018</span>
+    </div>
+
+    <div id="links">
+      <a href="https://github.com/Domenick97" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub" class="icon-link" id="githubLink"/></a>
+      <a href="https://linkedin.com/in/domenickd" target="_blank" rel="noopener"><img src="images/linkedIn.png" alt="LinkedIn" class="icon-link" id="linkedInLink"/></a>
+      <a href="http://domenickdibiase.com" target="_blank" rel="noopener"><img src="images/DD.png" alt="Resume" class="icon-link" id="resumeLink"/></a>
+    </div>
+  </div>
+  </footer>
+</body>
+
+</html>

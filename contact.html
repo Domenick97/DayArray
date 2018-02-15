@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96903651-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+
+    <meta charset="UTF-8">
+    <meta name="description" content="To-do list application contact">
+    <meta name="keywords" content="todo,to-do,day,array,dayarray,list,editor,settings">
+    <meta name="author" content="Domenick DiBiase">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script language="JavaScript" type="text/JavaScript" src="js/main.js"></script>
+
+    <title>Day Array</title>
+  </head>
+  <body>
+    <div style="min-height:calc(100% - 90px); margin-bottom:30px;">
+      <header class="header-theme container-fluid" style="box-shadow: 0 2px 5px #BBB">
+        <a href="index.html" rel="noopener">
+          <div class="arrow-back">
+            <svg width="40" height="40" class="arrow">
+              <polygon stroke-linejoin="round"
+                points="6,20 32,8 32,32"
+                stroke="#FFF" stroke-width="8"
+                fill="#FFF"/>
+            </svg>
+            <div class="title title-back" style="display:inline;">Day Array</div>
+            <img src="images/favicon.ico" class="logo"/>
+          </div>
+        </a>
+    </header>
+
+    <section>
+
+      <!-- Main section -->
+      <div class="container-fluid" style="padding-top:10px;" >
+        <div class="row justify-content-center">
+          <div class="col-md-10 item-col settings-hub" style="transition: 1.5s;">
+
+            <!-- Setting title -->
+            <div class="row justify-content-center" style="background-color:#E9ecef;border-radius:4px 4px 0 0; padding-top:10px; padding-bottom:10px;font-size:22px">
+              Settings
+            </div>
+
+            <!-- Input for theme color -->
+            <div class="row justify-content-center" style="padding:24px">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="theme-color-input" style="min-width:150px">Theme Color</label>
+                </div>
+                <select class="custom-select" id="theme-color-input" onchange="updateColor()">
+                  <option value="0">Blue</option>
+                  <option value="1">Red</option>
+                  <option value="2">Green</option>
+                  <option value="3">Orange</option>
+                  <option value="4">Yellow</option>
+                  <option value="5">Pink</option>
+                  <option value="6">Purple</option>
+                  <option value="7">Grey</option>
+                  <option value="8">Dark</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Input for saving the list items -->
+            <div class="row justify-content-center" style="padding-bottom:24px;padding-left:24px;padding-right:24px">
+              <!-- Temporary Message -->
+              Currently the setting options for saving are not operational and will stay at its default settings.</br></br>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="save-preference" style="min-width:150px">Save List</label>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer style="text-align:center;" class="container-fluid">
+    <div class="row justify-content-center">
+    <div  id="foot">
+      <span class="prompt" id="privacy">Privacy Policy</span>
+      <span style="color:#bbb">|</span>
+      <span class="prompt">&copy; Copyright 2018</span>
+    </div>
+
+    <div id="links">
+      <a href="https://github.com/Domenick97" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub" class="icon-link" id="githubLink"/></a>
+      <a href="https://linkedin.com/in/domenickd" target="_blank" rel="noopener"><img src="images/linkedIn.png" alt="LinkedIn" class="icon-link" id="linkedInLink"/></a>
+      <a href="http://domenickdibiase.com" target="_blank" rel="noopener"><img src="images/DD.png" alt="Resume" class="icon-link" id="resumeLink"/></a>
+    </div>
+  </div>
+  </footer>
+  </body>
+
+  </html>
