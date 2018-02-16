@@ -1,3 +1,7 @@
+::selection{
+  background: #DDD;
+}
+
 body{
   font: 16px/1.5 arial;
   margin: 0;
