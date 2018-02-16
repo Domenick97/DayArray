@@ -18,3 +18,9 @@
 .menu-item:hover{
   background-color: #F1C40F;
 }
+
+#user-name:focus, #user-email:focus, #message-subject:focus, #message-body:focus {
+    outline: none !important;
+    border-color: #f5d34b;
+    box-shadow: 0 0 1px 3px #fae9a5;
+}

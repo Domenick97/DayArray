@@ -44,3 +44,10 @@ footer{
 .menu-item:hover{
   background-color: #888;
 }
+
+
+#user-name:focus, #user-email:focus, #message-subject:focus, #message-body:focus {
+    outline: none !important;
+    border-color: #bbb;
+    box-shadow: 0 0 1px 3px #DDD;
+}

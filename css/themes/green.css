@@ -8,7 +8,6 @@
 
 .color-theme{
   color: #27AE60;
-
 }
 
 .item-theme{
@@ -18,4 +17,10 @@
 
 .menu-item:hover{
   background-color: #27AE60;
+}
+
+#user-name:focus, #user-email:focus, #message-subject:focus, #message-body:focus {
+    outline: none !important;
+    border-color: #49d685;
+    box-shadow: 0 0 1px 3px #a4ebc2;
 }

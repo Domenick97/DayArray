@@ -56,45 +56,26 @@
               Contact Form
             </div>
 
-            <form>
-              <!-- Input for theme color -->
-              <div class="row justify-content-center" style="padding:24px">
-
+            <form style="padding: 32px 10px 20px 10px"  action="https://formspree.io/domenickdibiase@gmail.com" method="POST">
+              <input type="hidden" name="_next" value="http://dayarray.com" />
+              <div class="form-group">
+                <label for="user-name">Full Name</label>
+                <input type="text" class="form-control" name="Name" id="user-name" placeholder="First & Last Name">
               </div>
-
-              <!-- Input for saving the list items -->
-              <div class="row justify-content-center" style="padding-bottom:24px;padding-left:24px;padding-right:24px">
-                <!-- Temporary Message -->
-                At the moment, the contact form is not operational.</br></br>
-                <div class="input-group mb-2">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text" for="user-name" style="min-width:150px">Full Name</label>
-                  </div>
-                  <input type="text" class="form-control" name="Name" id="user-name"/>
-
-                </div>
-                <div class="input-group mb-2">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text" for="user-name" style="min-width:150px">Email Address</label>
-                  </div>
-                  <input type="text" class="form-control" name="Name" id="user-name"/>
-
-                </div>
-                <div class="input-group mb-2">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text" for="user-name" style="min-width:150px">Subject</label>
-                  </div>
-                  <input type="text" class="form-control" name="Name" id="user-name"/>
-
-                </div>
-                <div class="input-group mb-2">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text" for="user-name" style="min-width:150px">Text</label>
-                  </div>
-                  <input type="text" class="form-control" name="Name" id="user-name"/>
-
-                </div>
-
+              <div class="form-group">
+                <label for="user-email">Email address</label>
+                <input type="email" class="form-control" name="_replyto" id="user-email" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="message-subject">Subject</label>
+                <input type="text" class="form-control" name="Subject" id="message-subject" placeholder="Subject">
+              </div>
+              <div class="form-group">
+                <label for="message-body">Message</label>
+                <textarea class="form-control" name="Message" id="message-body" rows="3" placeholder="Message"></textarea>
+              </div>
+              <div>
+                <button type="submit" class="btn header-theme btn-outline-dark" value="Send">Submit</button>
               </div>
             </form>
           </div>
