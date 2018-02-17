@@ -112,6 +112,28 @@ footer::-webkit-scrollbar-thumb:hover {
   margin: 0px 0 15px 0;
 }
 
+@media screen and (max-width:600px){
+  .title-alone{
+    padding: 5px 0 0 20px;
+    width: 220px;
+  }
+  .arrow{
+    width: 60px;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width:500px){
+  .title-alone{
+    padding: 5px 0 0 10px;
+    width: 210px;
+  }
+  .arrow{
+    width: 50px;
+    padding-left: 10px;
+  }
+}
+
 #drop-down{
   display: inline-block;
   position: absolute;
