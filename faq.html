@@ -20,10 +20,18 @@
       .color-theme{
         text-decoration: none;
       }
-      .color-theme:hover{
-        color: #e1e1e1;
+      p a:hover{
+        color: #bbb;
         transition: 1s;
+        text-decoration: none;
       }
+      #info6 p{
+        padding: 24px 24px 5px 24px;
+      }
+      #info6 div{
+        margin-bottom: 24px;
+      }
+
     </style>
 
 
@@ -83,9 +91,9 @@
             </div>
 
             <!-- Input for theme color -->
-            <div class="row justify-content-center" style="padding:32px 20px 32px 20px; text-align:center;">
+            <div class="row justify-content-center" style="padding:32px 50px 32px 50px; text-align:center;">
 
-              <p>Don't see your question on here? Feel free to contact me directly at <a href="mailto:domenickdibiase@gmail.com" style="text-decoration:none;" class="color-theme">domenickdibiase@gmail.com</a> or you can fill out a form online <a href="contact.html" rel="noopener" alt="Contact Page" class="color-theme">here</a>.</p>
+              <p>Don't see your question on here? Feel free to contact me directly at <a href="mailto:domenickdibiase@gmail.com" style="text-decoration:none;" class="color-theme">domenickdibiase@gmail.com</a> or you can fill out a online form <a href="contact.html" rel="noopener" alt="Contact Page" class="color-theme">here</a>.</p>
 
             </div>
             <div class="row justify-content-center question-title" onclick="animateInfo(1)">
@@ -95,28 +103,44 @@
               <p>On the main Page there is a plus button, click that and a menu will slide down at the top of the list. From there you can fill in the information for your to-do item.</p>
             </div>
             <div class="row justify-content-center question-title" onclick="animateInfo(2)">
-              Why do the filter and sort options not work?
+              How is my list saved?
             </div>
             <div class="question-info" id="info2">
-            <p>At the moment, those options are not avalible. I plan on getting those up and running in the near future along with several other features. If you would like to contirbute to the development of this page and its features check out the "How Can I Help?" section below.</p>
+              <p>In the settings there is an option to change the how your to-do list is saved or to not have it saved.</br></br>
+              <span style="font-weight: bold" class="color-theme">Local Storage (Default):</span> This option saves the list to the local storage within the user's web browser. This allows the user to exit the browser and when they come back to the site the list will still be there.</br>
+              <span style="font-weight: bold" class="color-theme">Session Storage:</span> This option saves the list to the session storage within the user's web browser. The list is only saved while the browser remains open. When the browser is closed all data will be erased.</br>
+              <span style="font-weight: bold" class="color-theme">Don't Save:</span> This does not save the list at all and closing the tab or even simplying changing to a different page within the website may erase the data. (Not Recommended)</br></br>
+              Notice - This website does not store the data regarding the users to-do list or preferences on any server, instead all of that information and data is saved locally.</p>
             </div>
             <div class="row justify-content-center question-title" onclick="animateInfo(3)">
-              How can I help?
+              Why do the filter and sort options not work?
             </div>
             <div class="question-info" id="info3">
-              <p>Even though most of the basic functionality of the site is finished, there is always room for improvement. If you would like to contribute to the development of this site please check out the project on GitHub here: <a href="https://github.com/Domenick97/DayArray" alt="Link to project on github" target="_blank" class="color-theme">Day Array</a>. If you do not want to directly contribute, you may contact me with any suggestions or ideas.</p>
+            <p>At the moment, those options are not avalible. I plan on getting those up and running in the near future along with several other features. If you would like to contirbute to the development of this page and its features check out the "How Can I Help?" section below.</p>
             </div>
             <div class="row justify-content-center question-title" onclick="animateInfo(4)">
-              How do I contact you?
+              How can I help?
             </div>
             <div class="question-info" id="info4">
-              <p>If you would like to contact me directly, feel free to email me at <a href="mailto:domenickdibiase@gmail.com" class="color-theme">domenickdibiase@gmail.com</a> or you can fill out a form online <a href="contact.html" rel="noopener" alt="Contact Page" class="color-theme">here</a>. Also, you can check out other projects I have worked on at my personal website <a href="domenickdibiase.com" target="_blank" class="color-theme">domenickdibiase.com<a> .</p>
+              <p>Even though most of the basic functionality of the site is finished, there is always room for improvement. If you would like to contribute to the development of this site please check out the project on GitHub here: <a href="https://github.com/Domenick97/DayArray" alt="Link to project on github" target="_blank" class="color-theme">Day Array</a>. If you do not want to directly contribute, you may contact me with any suggestions or ideas.</p>
             </div>
             <div class="row justify-content-center question-title" onclick="animateInfo(5)">
-              How can I donate?
+              How do I contact you?
             </div>
             <div class="question-info" id="info5">
-              <p>At the moment, I have not set up the donations option. Check back soon :)</p>
+              <p>If you would like to contact me directly, feel free to email me at <a href="mailto:domenickdibiase@gmail.com" class="color-theme">domenickdibiase@gmail.com</a> or you can fill out a form online <a href="contact.html" rel="noopener" alt="Contact Page" class="color-theme">here</a>. Also, you can check out other projects I have worked on at my personal website <a href="domenickdibiase.com" target="_blank" class="color-theme">domenickdibiase.com<a> .</p>
+            </div>
+            <div class="row justify-content-center question-title" onclick="animateInfo(6)">
+              How can I donate?
+            </div>
+            <div class="question-info" id="info6">
+              <p>If you like what you see and want to help, feel free to donate to help me (the developer) cover cost associated with running a website.</p>
+              <a href="https://paypal.me/Domenick" alt="Donations through paypal" target="_blank" style="width: 150px;text-decoration:none;">
+                <div style="max-width: 150px;border-radius:15px;color:#FFF; text-decoration:none;text-align:center;margin:auto;" class="header-theme">
+                  <p style="padding:4px;">Support The Site</p><!-- background-color:#F8C826;-->
+                </div>
+              </a>
+            </br>
             </div>
 
           </div>
