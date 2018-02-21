@@ -40,7 +40,7 @@
         </div>
 
         <div id="drop-down">
-          <a onclick="slideMenuOpen()" style="height:48px;width:50px;float:left;padding:10px;margin:0;">
+          <a onclick="changeSlideMenu()" style="height:48px;width:50px;float:left;padding:10px;margin:0;">
             <svg width="30px" height="28px">
               <path d="M0,3 30,3" stroke="#FFF" stroke-width="6px"/>
               <path d="M0,14 30,14" stroke="#FFF" stroke-width="6px"/>
@@ -53,7 +53,7 @@
       <!-- Slide Menu -->
       <section id="slide-menu">
         <div style="position:relative">
-          <a style="position:absolute;top:5px;right:20px;margin:0;font-size:40px;" onclick="slideMenuClose()" id="menu-dismiss">
+          <a style="position:absolute;top:5px;right:20px;margin:0;font-size:40px;" onclick="changeSlideMenu()" id="menu-dismiss">
             &times;
           </a>
         </div>
@@ -91,7 +91,7 @@
             </select>
           </form>
 
-          <div id="add" onclick="openCreation()">
+          <div id="add" onclick="animateCH()">
             <svg width="30px" height="30px" >
               <path d="M15,2 15,28" stroke="#f1f1f0" stroke-width="6px"/>
               <path d="M2,15 28,15" stroke="#f1f1f0" stroke-width="6px"/>
@@ -99,7 +99,7 @@
           </div>
         </div>
 
-        <!-- Addition area -->
+        <!-- Creation hub -->
         <div id="addition-expansion">
           <form class="item-col container-fluid" style="padding:20px;">
             <div class="row justify-content-center">
@@ -112,7 +112,7 @@
                 <input type="text" placeholder="Location"  id="input-location" class="input-item input-item-min">
                 <input type="text" placeholder="mm/dd/yyy" id="input-date" class="input-item input-item-min">
                 <div class="row justify-content-center" style="padding-top:25px">
-                  <button type='button' class="btn-sty" onclick="closeCreation()">Cancel</button>
+                  <button type='button' class="btn-sty" onclick="animateCH()">Close</button>
                   </form>
                   <button type='button' class="btn-sty" onclick="createItem()">Create</button>
                   </form>

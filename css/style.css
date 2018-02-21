@@ -149,6 +149,23 @@ footer::-webkit-scrollbar-thumb:hover {
   font-size:30px;
 }
 
+.slide-menu-close{
+  width:0px !important;
+  opacity: .8 !important;
+}
+
+.slide-menu-open{
+  width:350px !important;
+  opacity: .85;
+}
+
+@media screen and (max-width:600px){
+  .slide-menu-open{
+    width:100% !important;
+    opacity: .92 !important;
+  }
+}
+
 #slide-menu a{
   text-decoration: none;
 }

@@ -24,8 +24,8 @@ function initAll(){
   } else {
     // Temporary error message for the sort and filter options
     document.getElementById("s").addEventListener("click", topp);
-    // Initializes creation menu status
-    document.getElementById("add").open = false;
+
+    //document.getElementById("slide-menu").className = "slide-menu-close";
     // Load saved items in the list
     loadItems();
   }
@@ -118,6 +118,7 @@ function createItem(){
   var title = document.getElementById('input-title').value;
   document.getElementById('input-title').value = null;
   var desc = document.getElementById('input-description').value;
+  desc = desc.replace(/\n/g, "</br>");
   document.getElementById('input-description').value = null;
   var next = new Item(title, desc);
   next.add();
@@ -235,37 +236,32 @@ function privOut(){
 }
 
 /**
- * Opens the creation section for an item
+ * Opens and closes the creation section for an item
  */
-function openCreation(){
-  if(document.getElementById("add").open)
-    closeCreation();
-  else {
+function animateCH(){
+  if(document.getElementById("add").open == null || !document.getElementById("add").open) {
     document.getElementById("addition-expansion").className = "create";
     document.getElementById("add").open = true;
+  } else {
+    document.getElementById("addition-expansion").className = "";
+    document.getElementById("add").open = false;
   }
-}
-
-/**
- * Closes the creation section for an item
- */
-function closeCreation(){
-  document.getElementById("addition-expansion").className = "";
-  document.getElementById("add").open = false;
 }
 
 /**
  * Opens the slide menu
  */
-function slideMenuOpen(){
-  document.getElementById("slide-menu").style.width = "350px";
-}
-
-/**
- * Closes the slide menu
- */
-function slideMenuClose(){
-  document.getElementById("slide-menu").style.width = "0px";
+function changeSlideMenu(){
+  var slideM = document.getElementById("slide-menu");
+  if(slideM.open = null || !slideM.open){
+    slideM.open = true;
+    slideM.className = "slide-menu-open";
+    //slideM.style.width = "350px";
+  } else {
+    slideM.className = "slide-menu-close";
+    //slideM.style.width = "0px";
+    slideM.open = false;
+  }
 }
 
 /**
