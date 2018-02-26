@@ -1,4 +1,6 @@
 window.onload = initAll;
+
+window.allowDrop = allowDrop(event);
 //window.addEventListener("resize", initResize);
 
 var array;
@@ -308,4 +310,24 @@ function backAnimationOff(){
      qinfo.style.maxHeight = "0px";
      qinfo.open = false;
    }
+ }
+
+
+
+ function allowDrop(ev) {
+   ev.preventDefault();
+  if (ev.target.getAttribute("draggable") == "true")
+      ev.dataTransfer.dropEffect = "none"; // dropping is not allowed
+  else
+      ev.dataTransfer.dropEffect = "all"; // drop it like it's hot
+ }
+
+ function drag(ev) {
+     ev.dataTransfer.setData("text", ev.target.id);
+ }
+
+ function drop(ev) {
+     ev.preventDefault();
+     var data = ev.dataTransfer.getData("text");
+     ev.target.appendChild(document.getElementById(data));
  }

@@ -127,7 +127,7 @@
         <!-- Main section -->
         <div class="container-fluid" style="padding-top:10px;" >
           <div class="row justify-content-center">
-            <div class="col-lg-8 item-col" id="stretch">
+            <div class="col-lg-8 item-col" ondrop="drop(event)" ondragover="allowDrop(event)" id="stretch" style="height:100%;">
 
               <!-- Main list area -->
               <!-- Test item -->
@@ -162,7 +162,7 @@
         <span class="prompt">&copy; Copyright 2018</span>
       </div>
 
-      <div id="links">
+      <div id="links" ondrop="drop(event)" ondragover="allowDrop(event)">
         <a href="https://github.com/Domenick97" target="_blank" rel="noopener"><img src="images/github.png" alt="GitHub" class="icon-link" id="githubLink"/></a>
         <a href="https://linkedin.com/in/domenickd" target="_blank" rel="noopener"><img src="images/linkedIn.png" alt="LinkedIn" class="icon-link" id="linkedInLink"/></a>
         <a href="http://domenickdibiase.com" target="_blank" rel="noopener"><img src="images/DD.png" alt="Resume" class="icon-link" id="resumeLink"/></a>

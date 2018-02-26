@@ -29,6 +29,14 @@ function Item(title, description){
     pen.src = "images/edit2.png";
     trash.src = "images/trash.png";
     shell.setAttribute("class","item item-theme");
+    // Draggable
+    shell.setAttribute("draggable", "true");
+    shell.setAttribute("ondragstart", "drag(event)");
+    shell.setAttribute("id", this.queue);
+    shell.setAttribute("dropEffect", "none");
+    //shell.setAttribute("ondrop", "drop(event)");
+    //shell.setAttribute("ondragover", "allowDrop(event)");
+
     main.setAttribute("class",'item-main');
     itemTitle.innerHTML = this.title; // ~~
     // main.innerHTML = this.title;
