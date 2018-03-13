@@ -21,6 +21,7 @@ Site for users to create a ToDo list that saves through local storage for them t
 </br>
 
 ### Theme Colors
+
 <table>
   <tr>
     <td style="background-color:#3498DB;width:50px;height:40px;"></td>
@@ -47,6 +48,7 @@ Site for users to create a ToDo list that saves through local storage for them t
 </table>
 
 </br>
+
 ## Links
 
 Within the site there are links to:
