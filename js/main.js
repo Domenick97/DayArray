@@ -1,6 +1,6 @@
 window.onload = initAll;
 
-window.allowDrop = allowDrop(event);
+//window.allowDrop = allowDrop(event);
 //window.addEventListener("resize", initResize);
 
 var array;
@@ -108,6 +108,7 @@ function loadItems(){
   */
   function autoSave(){
     localStorage.setItem('list', JSON.stringify(array));
+    //console.log(array);
   }
 
  /**
@@ -312,22 +313,76 @@ function backAnimationOff(){
    }
  }
 
+/**
+ * Prevents default events for drag over
+ *
+ * @param ev ondragover event
+ */
+function allowDrop(ev) {
+  ev.preventDefault();
+}
 
+/**
+ * On item drag it sets the data to the items id
+ *
+ * @param ev ondragstart event
+ */
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
 
- function allowDrop(ev) {
-   ev.preventDefault();
-  if (ev.target.getAttribute("draggable") == "true")
-      ev.dataTransfer.dropEffect = "none"; // dropping is not allowed
+/**
+ * When the item is droped to another position the it
+ * updates the item list to reflect
+ *
+ * @param ev ondrop event
+ */
+function drop(ev) {
+  if( array.swap == null )
+    array.swap = true;
   else
-      ev.dataTransfer.dropEffect = "all"; // drop it like it's hot
+    array.swap = !array.swap;
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+
+    var targ = ev.target;
+    while(targ.id == null || targ.id == ""){
+      targ = targ.parentElement;
+    }
+
+    if( array.swap && ev.target != null){
+      moveItem(targ.id, data);
+    }
  }
 
- function drag(ev) {
-     ev.dataTransfer.setData("text", ev.target.id);
- }
+/**
+ * Moves the item at the given index to the desired position
+ *
+ * @param moveIndex desired index of the item being moved
+ * @param index current index of the item being moved
+ */
+function moveItem(moveIndex, index){
+  var tempItem = array[index];
 
- function drop(ev) {
-     ev.preventDefault();
-     var data = ev.dataTransfer.getData("text");
-     ev.target.appendChild(document.getElementById(data));
- }
+  // Removes the item thats being moved
+  array.splice(parseInt(index), 1);
+
+  // Inserts item into the array at the desired index
+  array.splice(moveIndex, 0, tempItem);
+
+  // Resets all of the items queue values
+  for(var i = 0; i < array.length; i++){
+    array[i].queue = i;
+  }
+
+  autoSave();
+  //location.reload();
+  var parent = document.getElementById('stretch');
+  while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+  }
+  for(var i = 0; i < array.length; i++){
+    array[i].add()
+  }
+}
