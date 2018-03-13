@@ -4,7 +4,7 @@ http://dayarray.com
 
 Site for users to create a ToDo list that saves through local storage for them to come back to.
 
-> Currently in Beta
+> Beta
 
 ## Features
 
@@ -18,11 +18,36 @@ Site for users to create a ToDo list that saves through local storage for them t
 - [ ] Display the ToDo items by day, type, ect.
 - [ ] Search the ToDo items
 
-### Learning Outcome
+</br>
 
-While I have experience in languages like Java and C from the classes I have taken, I have not been taught web development. This website will grow and will increase in functionality as I learn the skills necessary to implement certain aspects.
+### Theme Colors
+<table>
+  <tr>
+    <td style="background-color:#3498DB;width:50px;height:40px;"></td>
+    <td style="background-color:#27AE60;width:50px;height:40px;"></td>
+    <td style="background-color:#F1C40F;width:50px;height:40px;"></td>
+    <td style="background-color:#E67E22;width:50px;height:40px;"></td>
+    <td style="background-color:#E74C3C;width:50px;height:40px;"></td>
+    <td style="background-color:#FF9AF3;width:50px;height:40px;"></td>
+    <td style="background-color:#9B59B6;width:50px;height:40px;"></td>
+    <td style="background-color:#7B7D7D;width:50px;height:40px;"></td>
+    <td style="background-color:#333;width:50px;height:40px;"></td>
+  </tr>
+  <tr>
+    <td style="background-color:#fff;width:50px;height:15px;"></td>
+    <td style="background-color:#fff;width:50px;height:15px;"></td>
+    <td style="background-color:#fff;width:50px;height:15px;"></td>
+    <td style="background-color:#fff;width:50px;height:15px;"></td>
+    <td style="background-color:#fff;width:50px;height:15px;"></td>
+    <td style="background-color:#fff;width:50px;height:15px;"></td>
+    <td style="background-color:#fff;width:50px;height:15px;"></td>
+    <td style="background-color:#fff;width:50px;height:15px;"></td>
+    <td style="background-color:#040406;width:40px;height:15px;"></td>
+  </tr>
+</table>
 
-### Links
+</br>
+## Links
 
 Within the site there are links to:
 
@@ -32,5 +57,4 @@ Within the site there are links to:
 
 ## Acknowledgments
 
-* HTML/CSS Book - HTML and CSS: Design and Build Websites, by Jon Duckett
 * [Traversy Media](https://www.traversymedia.com/) - Brad Traversy
