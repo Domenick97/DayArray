@@ -372,7 +372,7 @@ footer::-webkit-scrollbar-thumb:hover {
   padding-bottom: 5px;*/
 }
 
-.item-edit, .item-delete{
+.item-edit, .item-delete, .item-save{
   width:24px;
   height: 24px;
   background-color: #CCC;
@@ -398,7 +398,7 @@ footer::-webkit-scrollbar-thumb:hover {
 }
 
 .item-delete{
-  top:24px;
+  top:25px;
   right:0;
 }
 
@@ -412,6 +412,29 @@ footer::-webkit-scrollbar-thumb:hover {
   transition: 1s;
 }
 
+.item-save{
+  top:50px;
+  right:0;
+}
+
+.item-save img{
+  width: 14px;
+  height: 14px;
+  float: left;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transition: 1s;
+}
+
+/*
+ Styling for the items edit moveIndex
+ */
+.edit-input{
+  border: 1px solid #001;
+  background-color: #F2F4F7;
+  border-radius: 1px;
+}
 
 .settings-hub{
   border: 1px solid #DDD;
