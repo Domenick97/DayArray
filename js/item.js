@@ -47,10 +47,10 @@ function Item(title, description){
     // Draggable
     shell.setAttribute("draggable", "true");
     shell.setAttribute("ondragstart", "drag(event)");
+    shell.setAttribute("ondragover", "allowDrop(event)");
     shell.setAttribute("id", this.queue);
     shell.setAttribute("dropEffect", "none");
     shell.setAttribute("ondrop", "drop(event)");
-    shell.setAttribute("ondragover", "allowDrop(event)");
     shell.style.zIndex = "3";
 
     main.setAttribute("class",'item-main');
@@ -80,10 +80,15 @@ function Item(title, description){
       itemDescE = document.createElement('textarea');
       itemDescE.type = "text";
       itemDescE.placeholder = "Description";
-      itemDescE.value = descriptions.replace(/\<br\>/g, "\n")
+      itemDescE.value = description.replace(/(<br>|<\/br>|<br \/>)/mgi, "\n");
       itemDescE.className = "edit-input edit-left";
       info.removeChild(info.firstChild);
       info.appendChild(itemDescE);
+
+      dragSwitch = false;
+      shell.setAttribute("draggable", null);
+      shell.setAttribute("ondragstart", null);
+      shell.setAttribute("ondragover", null);
 
       // Switches out the editor pen for a save icon
       shell.appendChild(save);
@@ -91,16 +96,22 @@ function Item(title, description){
       editor.parentNode.removeChild(editor);
     };
 
+    // Save the changes made to the item
     save.onclick = function(){
       itemTitle.innerHTML = itemTitleE.value;
       array[queue].title = itemTitleE.value;
       main.removeChild(main.firstChild);
       main.appendChild(itemTitle);
 
-      itemDesc.innerHTML = itemDescE.value;
-      array[queue].description = itemDescE.value;
+      itemDesc.innerHTML = itemDescE.value.replace(/\n/g, "</br>");
+      array[queue].description = itemDescE.value.replace(/\n/g, "</br>");
       info.removeChild(info.firstChild);
       info.appendChild(itemDesc);
+
+      dragSwitch = true;
+      shell.setAttribute("draggable", "true");
+      shell.setAttribute("ondragstart", "drag(event)");
+      shell.setAttribute("ondragover", "allowDrop(event)");
 
       shell.appendChild(edit);
       var saver = document.getElementById("save" + queue);
@@ -175,6 +186,8 @@ function Item(title, description){
       del.style.top = "25px";
       document.body.style.cursor = "auto";
     };
+
+
 
     // Appends the elements together
     edit.appendChild(pen);

@@ -430,6 +430,14 @@ footer::-webkit-scrollbar-thumb:hover {
 
 .edit-left{
   width: 500px;
+  height: auto;
+}
+
+@media screen and (max-width:540px){
+  .edit-left{
+    width: 300px;
+    height: auto;
+  }
 }
 
 .settings-hub{

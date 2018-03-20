@@ -4,6 +4,7 @@ window.onload = initAll;
 //window.addEventListener("resize", initResize);
 
 var array;
+var dragSwitch = true;
 
 /**
  * Initializes everything on window load
@@ -319,7 +320,8 @@ function backAnimationOff(){
  * @param ev ondragover event
  */
 function allowDrop(ev) {
-  ev.preventDefault();
+  if(dragSwitch)
+    ev.preventDefault();
 }
 
 /**
@@ -328,7 +330,9 @@ function allowDrop(ev) {
  * @param ev ondragstart event
  */
 function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
+  if(dragSwitch){
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
 }
 
 /**
@@ -338,10 +342,11 @@ function drag(ev) {
  * @param ev ondrop event
  */
 function drop(ev) {
-  if( array.swap == null )
-    array.swap = true;
-  else
-    array.swap = !array.swap;
+  if(dragSwitch){
+    if( array.swap == null )
+      array.swap = true;
+    else
+      array.swap = !array.swap;
 
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
@@ -354,7 +359,8 @@ function drop(ev) {
     if( array.swap && ev.target != null){
       moveItem(targ.id, data);
     }
- }
+  }
+}
 
 /**
  * Moves the item at the given index to the desired position
