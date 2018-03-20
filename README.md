@@ -1,3 +1,4 @@
+![Alt text](images/favicon.ico?raw=true "Title")
 # Day Array
 
 http://dayarray.com
@@ -13,6 +14,7 @@ Site for users to create a ToDo list that saves through local storage for them t
 - [x] ToDo List saves to local storage
 - [x] User preferences save to local storage
 - [x] Drag and re-order items within the list
+- [x] Edit ToDo items after they have been created
 - [ ] Mark items as completed
 - [ ] Sort ToDo items
 - [ ] Display the ToDo items by day, type, ect.
