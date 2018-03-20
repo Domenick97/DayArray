@@ -1,9 +1,9 @@
 window.onload = initAll;
-
-//window.allowDrop = allowDrop(event);
 //window.addEventListener("resize", initResize);
 
+// Array of all the items in the list
 var array;
+// Boolean to turn off drag and drop while editing
 var dragSwitch = true;
 
 /**

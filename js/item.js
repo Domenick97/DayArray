@@ -44,15 +44,6 @@ function Item(title, description){
     trash.src = "images/trash.png";
     floppy.src = "images/save.png";
     shell.setAttribute("class","item item-theme");
-    // Draggable
-    shell.setAttribute("draggable", "true");
-    shell.setAttribute("ondragstart", "drag(event)");
-    shell.setAttribute("ondragover", "allowDrop(event)");
-    shell.setAttribute("id", this.queue);
-    shell.setAttribute("dropEffect", "none");
-    shell.setAttribute("ondrop", "drop(event)");
-    shell.style.zIndex = "3";
-
     main.setAttribute("class",'item-main');
     itemTitle.innerHTML = this.title;
     info.setAttribute("class","item-info");
@@ -62,6 +53,16 @@ function Item(title, description){
     del.setAttribute("class", "item-delete");
     save.setAttribute("class", "item-edit");
     save.setAttribute("id", "save" + this.queue);
+
+    // Draggable
+    shell.setAttribute("draggable", "true");
+    shell.setAttribute("ondragstart", "drag(event)");
+    shell.setAttribute("ondragover", "allowDrop(event)");
+    shell.setAttribute("id", this.queue);
+    shell.setAttribute("dropEffect", "none");
+    shell.setAttribute("ondrop", "drop(event)");
+    shell.style.zIndex = "3";
+
     var index = this.queue;
 
     // On click of the delete button call removeItem function
@@ -69,22 +70,30 @@ function Item(title, description){
 
     // On click of the edit button call edit function
     edit.onclick = function(){
+      // Creates the input element for the title
       itemTitleE =  document.createElement('input');
       itemTitleE.type = "text";
       itemTitleE.placeholder = "Item";
       itemTitleE.value = title;
       itemTitleE.className = "edit-input  edit-left";
+
+      // Removes the text element and adds the input element
       main.removeChild(main.firstChild);
       main.appendChild(itemTitleE);
 
+      // Creates the input element for the description
       itemDescE = document.createElement('textarea');
       itemDescE.type = "text";
       itemDescE.placeholder = "Description";
       itemDescE.value = description.replace(/(<br>|<\/br>|<br \/>)/mgi, "\n");
       itemDescE.className = "edit-input edit-left";
+
+      // Removes the text element for the description and
+      // adds the input element
       info.removeChild(info.firstChild);
       info.appendChild(itemDescE);
 
+      // Turns off drag events while editing
       dragSwitch = false;
       shell.setAttribute("draggable", null);
       shell.setAttribute("ondragstart", null);
@@ -98,21 +107,27 @@ function Item(title, description){
 
     // Save the changes made to the item
     save.onclick = function(){
+      // Gets the value from the input title and sets
+      // the title equal to it, removing the input element
       itemTitle.innerHTML = itemTitleE.value;
       array[queue].title = itemTitleE.value;
       main.removeChild(main.firstChild);
       main.appendChild(itemTitle);
 
+      // Gets the value from the input description and sets
+      // the description equal to it, removing the input element
       itemDesc.innerHTML = itemDescE.value.replace(/\n/g, "</br>");
       array[queue].description = itemDescE.value.replace(/\n/g, "</br>");
       info.removeChild(info.firstChild);
       info.appendChild(itemDesc);
 
+      // Turns on drag events back on
       dragSwitch = true;
       shell.setAttribute("draggable", "true");
       shell.setAttribute("ondragstart", "drag(event)");
       shell.setAttribute("ondragover", "allowDrop(event)");
 
+      // Removes save button and appends the edit button
       shell.appendChild(edit);
       var saver = document.getElementById("save" + queue);
       saver.parentNode.removeChild(saver);
@@ -187,32 +202,23 @@ function Item(title, description){
       document.body.style.cursor = "auto";
     };
 
-
-
-    // Appends the elements together
+    // Appends the elements together to make one item
     edit.appendChild(pen);
     del.appendChild(trash);
     save.appendChild(floppy);
     info.appendChild(itemDesc);
-    main.appendChild(itemTitle); // ~~
+    main.appendChild(itemTitle);
     shell.appendChild(main);
     shell.appendChild(info);
     shell.appendChild(edit);
     shell.appendChild(del);
-    //shell.appendChild(save);
 
     // Appends the elements to the document page
     var rost = document.getElementById('stretch');
     rost.appendChild(shell);
   };
 
-
-
 }
 
 // Session Storage
 // JS for list of undo's storing the deleted todo's
-
-//Local Storage
-// JS to store the has been here berfore info and settings
-// JS to store the to do list
