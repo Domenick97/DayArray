@@ -8,6 +8,7 @@ function Item(title, description){
   this.description = description;
   this.queue = document.getElementById('stretch').children.length;
 
+  var queue = document.getElementById('stretch').children.length;
   /**
    * Switches the items mode to edit
    */
@@ -34,6 +35,10 @@ function Item(title, description){
     var floppy = new Image();
     this.queue = document.getElementById('stretch').children.length;
 
+    // Editing elements
+    var itemTitleE;
+    var itemDescE;
+
     // Sets atributes to the elements
     pen.src = "images/edit2.png";
     trash.src = "images/trash.png";
@@ -53,8 +58,10 @@ function Item(title, description){
     info.setAttribute("class","item-info");
     itemDesc.innerHTML = this.description;
     edit.setAttribute("class", "item-edit");
+    edit.setAttribute("id", "edit" + this.queue);
     del.setAttribute("class", "item-delete");
-    save.setAttribute("class", "item-save");
+    save.setAttribute("class", "item-edit");
+    save.setAttribute("id", "save" + this.queue);
     var index = this.queue;
 
     // On click of the delete button call removeItem function
@@ -62,13 +69,43 @@ function Item(title, description){
 
     // On click of the edit button call edit function
     edit.onclick = function(){
-      var itemTitleE =  document.createElement('input');
+      itemTitleE =  document.createElement('input');
       itemTitleE.type = "text";
       itemTitleE.placeholder = "Item";
       itemTitleE.value = title;
-      itemTitleE.className = "edit-input";
+      itemTitleE.className = "edit-input  edit-left";
       main.removeChild(main.firstChild);
       main.appendChild(itemTitleE);
+
+      itemDescE = document.createElement('textarea');
+      itemDescE.type = "text";
+      itemDescE.placeholder = "Description";
+      itemDescE.value = descriptions.replace(/\<br\>/g, "\n")
+      itemDescE.className = "edit-input edit-left";
+      info.removeChild(info.firstChild);
+      info.appendChild(itemDescE);
+
+      // Switches out the editor pen for a save icon
+      shell.appendChild(save);
+      var editor = document.getElementById("edit" + queue);
+      editor.parentNode.removeChild(editor);
+    };
+
+    save.onclick = function(){
+      itemTitle.innerHTML = itemTitleE.value;
+      array[queue].title = itemTitleE.value;
+      main.removeChild(main.firstChild);
+      main.appendChild(itemTitle);
+
+      itemDesc.innerHTML = itemDescE.value;
+      array[queue].description = itemDescE.value;
+      info.removeChild(info.firstChild);
+      info.appendChild(itemDesc);
+
+      shell.appendChild(edit);
+      var saver = document.getElementById("save" + queue);
+      saver.parentNode.removeChild(saver);
+      autoSave();
     };
 
     // Mouse over event for the edit button
@@ -79,7 +116,6 @@ function Item(title, description){
       edit.style.height = "30px";
       edit.style.width = "30px";
       del.style.top = "33px";
-      save.style.top = "58px";
       document.body.style.cursor = "pointer";
     };
 
@@ -90,7 +126,6 @@ function Item(title, description){
       edit.style.height = "24px";
       edit.style.width = "24px";
       del.style.top = "25px";
-      save.style.top = "50px";
       document.body.style.cursor = "auto";
     };
 
@@ -103,7 +138,7 @@ function Item(title, description){
       del.style.width = "30px";
       del.style.top = "22px";
       edit.style.top = "-8px";
-      save.style.top = "58px";
+      save.style.top = "-8px";
       document.body.style.cursor = "pointer";
     };
 
@@ -115,7 +150,7 @@ function Item(title, description){
       del.style.width = "24px";
       del.style.top = "25px";
       edit.style.top = "0px";
-      save.style.top = "50px";
+      save.style.top = "0px";
       document.body.style.cursor = "auto";
     };
 
@@ -126,9 +161,7 @@ function Item(title, description){
       floppy.style.width = "20px";
       save.style.height = "30px";
       save.style.width = "30px";;
-      edit.style.top = "-8px";
-      del.style.top = "17px";
-      save.style.top = "47px";
+      del.style.top = "33px";
       document.body.style.cursor = "pointer";
     };
 
@@ -140,7 +173,6 @@ function Item(title, description){
       save.style.width = "24px";
       edit.style.top = "0px";
       del.style.top = "25px";
-      save.style.top = "50px";
       document.body.style.cursor = "auto";
     };
 
@@ -154,7 +186,7 @@ function Item(title, description){
     shell.appendChild(info);
     shell.appendChild(edit);
     shell.appendChild(del);
-    shell.appendChild(save);
+    //shell.appendChild(save);
 
     // Appends the elements to the document page
     var rost = document.getElementById('stretch');
