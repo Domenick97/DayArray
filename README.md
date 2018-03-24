@@ -1,5 +1,5 @@
-![Alt text](images/favicon.ico?raw=true "Title")
-# Day Array
+
+# ![Day Array Logo](images/DayArray-Icon-3.3.png?raw=true) Day Array 
 
 http://dayarray.com
 
