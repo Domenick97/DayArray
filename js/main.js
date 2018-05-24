@@ -112,24 +112,6 @@ function loadItems(){
     //console.log(array);
   }
 
- /**
- * Creates an Item adding it to the list and displaying it to the user.
- */
-function createItem(){
-  if(document.getElementById('empty-default'))
-    document.getElementById('stretch').removeChild(document.getElementById('stretch').children[0]);
-
-  var title = document.getElementById('input-title').value;
-  document.getElementById('input-title').value = null;
-  var desc = document.getElementById('input-description').value;
-  desc = desc.replace(/\n/g, "</br>");
-  document.getElementById('input-description').value = null;
-  var next = new Item(title, desc);
-  next.add();
-  array.push(next);
-  autoSave();
-}
-
 /**
  * Removes the item at the index given
  *
