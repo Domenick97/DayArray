@@ -17,11 +17,12 @@ html, body{
 header{
   width: 100%;
   color: #FFFFFF;
-  height: 100px;
+  height: 60px;
   overflow: hidden;
   /*box-shadow: inset 0px -4px 10px 0px #2A8ACA;*/
   /*box-shadow: inset 0px -2px 3px 0px #2A8ACA;*/
   display: relative;
+  transition: height .75s;
 }
 
 footer{
@@ -50,19 +51,23 @@ footer::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
+.center-margin{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 .icon-link{
   height: 1.5em;
   width: 1.5em;
 }
 
 .arrow-back{
-  width: 390px;
   overflow: hidden;
   vertical-align: middle;
   padding: 0;
-  margin: 20px 0 15px 0;
+  margin: 5px 0 15px 0;
   display: inline-block;
-  float:left;
+  float: left;
   transition: 1s;
   height: 60px;
 }
@@ -82,18 +87,24 @@ footer::-webkit-scrollbar-thumb:hover {
 
 .title{
   color:#FFF;
-  line-height: 50px;
-  font-size: 40px;
+  opacity: 1;
+  position: static;
+  transition: position .5s;
+  line-height: 35px;
+  font-size: 30px;
   font-weight:bold;
   display: inline-block;
   float:left;
   overflow: hidden;
   transition: 1s;
+  transition: width 1s;
 }
 
 .title-alone{
-  padding: 5px 0 0 70px;
-  width: 270px;
+  padding: 10px 0 0 70px;
+  width: 220px;
+  height: 50px;
+  overflow: hidden;
 }
 
 .title-back{
@@ -102,14 +113,13 @@ footer::-webkit-scrollbar-thumb:hover {
 }
 
 .logo{
-  width: 70px;
+  width: 60px;
   padding: 0;
   display: inline-block;
   float:left;
-  /*background-color: rgba(190,190,190, .3);*/
-  border-radius: 30%;
-  height: 70px;
+  height: 60px;
   margin: 0px 0 15px 0;
+  transition: width .75s, height .75s, ;
 }
 
 @media screen and (max-width:600px){
@@ -121,12 +131,29 @@ footer::-webkit-scrollbar-thumb:hover {
     width: 60px;
     padding-left: 20px;
   }
+
+  .logo {
+    height: 60px;
+    width: 60px;
+  }
+
+  .arrow-back{
+    margin: 5px 0 15px 0;
+  }
+  .title{
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+  }
+
+  header{
+    height:60px;
+  }
 }
 
 @media screen and (max-width:500px){
   .title-alone{
     padding: 5px 0 0 10px;
-    width: 210px;
   }
   .arrow{
     width: 50px;
@@ -138,7 +165,7 @@ footer::-webkit-scrollbar-thumb:hover {
   display: inline-block;
   position: absolute;
   right:32px;
-  top:26px;
+  top:10px;
   z=1;
   border: 2px solid #FFF;
   border-radius: 4px;
@@ -172,7 +199,7 @@ footer::-webkit-scrollbar-thumb:hover {
   z-index:20;
   transition: 1s;
   color:#FFF;
-  font-size:30px;
+  font-size:26px;
 }
 
 .slide-menu-close{
@@ -224,15 +251,15 @@ footer::-webkit-scrollbar-thumb:hover {
 #hub{
   text-align: center;
   position: relative;
-  padding: 15px 0 15px 0;
+  padding: 10px 0 10px 0;
 }
 
 #add{
   position: absolute;
   top: 5px;
   right: 30px;
-  height: 45px;
-  width: 45px;
+  height: 35px;
+  width: 35px;
   border-radius: 2px;
   background-color: #BBB;
   padding: 7px;

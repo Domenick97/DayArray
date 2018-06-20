@@ -267,7 +267,7 @@ function Settings(){
 function backAnimationOn(){
   var arrow = document.getElementsByClassName('arrow')[0];
   arrow.style.paddingLeft = "20px";
-  arrow.style.width = "90px";
+  arrow.style.width = "100px";
   var draw = document.getElementsByTagName('svg')[0];
   draw.style.fill = '#D00';
 }
