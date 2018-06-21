@@ -98,18 +98,10 @@ footer::-webkit-scrollbar-thumb:hover {
   overflow: hidden;
   transition: 1s;
   transition: width 1s;
-}
-
-.title-alone{
-  padding: 10px 0 0 70px;
-  width: 220px;
+  padding: 10px 0 0 50px;
+  width: 200px;
   height: 50px;
   overflow: hidden;
-}
-
-.title-back{
-  padding: 5px 0 0 10px;
-  width: 210px;
 }
 
 .logo{
@@ -120,6 +112,12 @@ footer::-webkit-scrollbar-thumb:hover {
   height: 60px;
   margin: 0px 0 15px 0;
   transition: width .75s, height .75s, ;
+}
+
+.logo-center{
+  position: absolute;
+  margin-left: calc(50% - 30px);
+  margin-right: 50%;
 }
 
 @media screen and (max-width:600px){

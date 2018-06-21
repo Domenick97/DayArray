@@ -266,8 +266,7 @@ function Settings(){
  */
 function backAnimationOn(){
   var arrow = document.getElementsByClassName('arrow')[0];
-  arrow.style.paddingLeft = "20px";
-  arrow.style.width = "100px";
+  arrow.style.paddingLeft = "30px";
   var draw = document.getElementsByTagName('svg')[0];
   draw.style.fill = '#D00';
 }
@@ -277,8 +276,7 @@ function backAnimationOn(){
  */
 function backAnimationOff(){
   var arrow = document.getElementsByClassName('arrow')[0];
-  arrow.style.paddingLeft = "60px";
-  arrow.style.width = "100px";
+  arrow.style.paddingLeft = "50px";
 }
 
 /**
